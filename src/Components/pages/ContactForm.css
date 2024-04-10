@@ -1,0 +1,76 @@
+.contact-container {
+  display: flex;
+  position: relative;;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+  margin: 0 auto;
+}
+.contact-container form {
+
+
+}
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width:100%;
+  margin: 5px auto;
+  color: #FFFAF0;
+}
+
+.form-control {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #FFFAF0;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-submit {
+  color: #000000;
+  background-color: #FFFAF0;
+  padding: .3rem .7rem;
+  margin: 8px 0;
+  border-radius: .25rem;
+  border: 1px solid #33ff00;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn-submit:hover {
+  color: #000000;
+  background-color: #FFFAF0;
+  background-color: #009414;
+  border-color: #FFFAF0;
+}
+.user-message{
+  position: relative;
+  max-height: 120px;
+}
+
+.form-group label{
+  display: block;
+  margin-bottom: .5rem;
+  color: #FFFAF0;
+}
+
+.hire-me{
+  position: relative;
+  display: block;
+  top: 10rem;
+  color: #FFFAF0;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,5 @@
+.blank {
+  position: relative;
+  padding: 40px;
+  z-index: -1;
+}

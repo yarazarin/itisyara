@@ -1,0 +1,54 @@
+{
+  "homepage": "https://yarazarin.github.io/myportfolio",
+  "name": "myportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.31",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "emailjs-com": "^3.2.0",
+    "hash-router": "^0.4.0",
+    "react-animated-slider": "^1.1.4",
+    "react-circular-menu": "^2.3.9",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-router-dom": "^5.3.4",
+    "react-router-link": "^2.0.2",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
+    "react-transition-group": "^4.4.5",
+    "use-sound": "^4.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
