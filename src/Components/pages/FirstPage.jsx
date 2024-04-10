@@ -16,7 +16,7 @@ const FirstPage = () => {
         const { target } = entry;
         if (entry.intersectionRatio >= 0.25) {
           target.classList.add("is-visible");
-          // Check if the user is on iOS
+          // Check if the user is on iOS (ios and mac doesn't support the animation yet!!🤦‍♀️ so we stop observing it once it starts)
           if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
             observerLeaf.unobserve(target); // stop observing once animation starts
           }

@@ -42,8 +42,12 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const sanitizedFirstName = firstName.replace(/<\/?[^>]+(>|$)/g, "");
+    const sanitizedEmail = email.replace(/<\/?[^>]+(>|$)/g, "");
+    const sanitizedMessage = message.replace(/<\/?[^>]+(>|$)/g, "");
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    if (!emailPattern.test(sanitizedEmail)) {
       alert("Please enter a valid email address.");
       return;
     }
@@ -54,9 +58,9 @@ const ContactForm = () => {
     }
 
     const templateParams = {
-      firstName: firstName,
-      email: email,
-      message: message,
+      firstName: sanitizedFirstName,
+      email: sanitizedEmail,
+      message: sanitizedMessage,
       subject: "Porto website",
     };
 
@@ -82,19 +86,21 @@ const ContactForm = () => {
 
   return (
     <div className="contact-container">
-      <h2 className="hire-me">
-        Would you be interested in my contributions to your team?
-        <i class="fa-solid fa-arrow-turn-down"></i>
-      </h2>
+      {!emailSent && (
+        <h2 className="hire-me">
+          Would you be interested in my contributions to your team?
+          <i class="fa-solid fa-arrow-turn-down"></i>
+        </h2>
+      )}
       {emailSent ? (
         <>
           <p>Email sent successfully!</p>
           <button
             type="reset"
-            className="btn-simple"
+            className="btn-back"
             onClick={handleResetContact}
           >
-            Reset
+            &larr; Back
           </button>
         </>
       ) : (
@@ -107,7 +113,7 @@ const ContactForm = () => {
               type="text"
               id="firstName"
               value={firstName}
-              placeholder="Title/name/company/organization/..."
+              placeholder="Your Name or Title here..."
               onChange={handleFirstNameChange}
               required
               className="form-control"
@@ -145,7 +151,7 @@ const ContactForm = () => {
             onChange={setCaptchaValue}
           />
           <button type="submit" className="btn-submit">
-            Submit
+            Submit<i class="fa-solid fa-paper-plane"></i>
           </button>
         </form>
       )}
