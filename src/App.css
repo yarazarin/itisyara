@@ -116,18 +116,6 @@ section.is-visible h2 {
   box-shadow: 0 0 0 0.5px white;
 }
 
-/* Title Styling */
-.title {
-  width: 100%;
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.title_b {
-  color: #000000;
-}
 
 
 /* Horizontal Gallery Styles */

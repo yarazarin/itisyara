@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "./SecondPage.css";
+import Arrow from "../Arrow";
 
 const SecondPage = () => {
   const partOneRef = useRef(null);
@@ -88,6 +89,7 @@ const SecondPage = () => {
 
         </div>
       </div>
+      <Arrow />
     </div>
   );
 };

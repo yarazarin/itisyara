@@ -4,6 +4,8 @@ nav {
   width: 100vw;
   padding: 10px 0;
   z-index: 1000;
+  background-color:transparent;
+
 }
 
 nav ul {
@@ -18,16 +20,17 @@ nav ul {
 
 nav ul li {
   color: #fff;
-  padding: 12px;
+  padding: 5px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: 0.5s;
-  box-shadow: #ffff0025 0px 1px 0px 0px;
+  box-shadow: #2f2f2f 0px 1px 0px 1px;
   text-align: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 100px;
+height: 45PX;
+border-top-left-radius: 50% 90%;
+border-bottom-right-radius: 50% 100%;
 }
 
 .nav-label {
@@ -44,9 +47,8 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background-color: #ff000085;
   color: #fff;
-  border: #fff 1px solid;
+  background-color: #9d000073;
 }
 
 .active {

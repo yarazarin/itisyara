@@ -81,11 +81,6 @@ padding: 0 20p;
 }
 
 
-
-
-
-
-
 @keyframes slideFromLeft {
   from {
     transform: translateX(-100%);
@@ -130,3 +125,22 @@ padding: 0 20p;
 }
   
 }
+
+
+@media (max-width: 768px) { 
+  
+  .second_container{
+    width: 105%;
+  }
+
+  }/* Adjust this value based on the specific tablet size you're targeting */
+  .part_one,
+  .part_two {
+    font-size: 20px; /* Adjust this value to half of the original font size */
+  }
+
+  .part_one p,
+  .part_two li,
+  .part_two ul {
+    font-size: 18px; /* Adjust this value to half of the original font size */
+  }

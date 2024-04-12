@@ -31,7 +31,7 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #495057;
-  background-color: #FFFAF0;
+  background-color: #fff0f0;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: .25rem;
@@ -70,8 +70,21 @@
 .hire-me{
   position: relative;
   display: block;
-  top: 10rem;
-  color: #FFFAF0;
-  font-size: .8rem;
+  margin:auto;
+  text-align: center;
+  top: 9rem;
+  line-height: 150%;
+  color: #d0d0d0;
+  font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) { /* Adjust this value based on the specific tablet size you're targeting */
+  .form-control {
+    font-size: .8rem; /* Adjust this value to fit the text size you want */
+  }
+
+  .btn-submit {
+    font-size: .8rem; /* Adjust this value to fit the button size you want */
+  }
 }

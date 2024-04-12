@@ -88,7 +88,7 @@ const ContactForm = () => {
     <div className="contact-container">
       {!emailSent && (
         <h2 className="hire-me">
-          Would you be interested in my contributions to your team?
+          Would you be interested <br/> in my contributions to your team?
           <i class="fa-solid fa-arrow-turn-down"></i>
         </h2>
       )}
@@ -149,6 +149,7 @@ const ContactForm = () => {
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={setCaptchaValue}
+            theme="dark" // Use the "dark" theme
           />
           <button type="submit" className="btn-submit">
             Submit<i class="fa-solid fa-paper-plane"></i>

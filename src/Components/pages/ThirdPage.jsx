@@ -8,6 +8,7 @@ import todo from "../../img/todo.png";
 import sticker from "../../img/sticker.png";
 
 import "./ThirdPage.css";
+import Arrow from "../Arrow";
 
 const linksData = [
   {
@@ -33,7 +34,8 @@ const linksData = [
     description: "Meet App",
     image: meet,
     paragraphs: [
-      "log in with google Authentication, show chart of meetings, search by city or country, filter the cities by name and number of cities.",
+      "Log in with Google Authentication, show chart of meetings, search by city or country, filter the cities by name and number of cities.",
+      "This application was built using modern testing technologies to ensure reliability and performance.",
     ],
     customDiv: <div></div>,
   },
@@ -99,7 +101,7 @@ const ThirdPage = () => {
           }`}
         >
           {currentLink !== null && (
-            <>
+            <div className="project-after">
               <div className="image-projects-container">
                 <img
                   src={linksData[currentLink].image}
@@ -113,10 +115,11 @@ const ThirdPage = () => {
                 ))}
               </div>
               {linksData[currentLink].customDiv}
-            </>
+            </div>
           )}
         </div>
       </div>
+      <Arrow />
     </>
   );
 };
