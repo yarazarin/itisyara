@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/itisyara/static/css/main.016e33db.css",
+    "main.js": "/itisyara/static/js/main.00e5dbe6.js",
+    "static/js/885.1f14c024.chunk.js": "/itisyara/static/js/885.1f14c024.chunk.js",
+    "static/media/api.png": "/itisyara/static/media/api.7eabf7dedba656939a0b.png",
+    "static/media/yara_sample_resume.pdf": "/itisyara/static/media/yara_sample_resume.5c4ac057c947cf2f8208.pdf",
+    "static/media/chat.png": "/itisyara/static/media/chat.10fddd9816842412543a.png",
+    "static/media/aw.png": "/itisyara/static/media/aw.12b08a9ff9b85f116592.png",
+    "static/media/mdb.png": "/itisyara/static/media/mdb.41e505b098e3087319b8.png",
+    "static/media/rn.png": "/itisyara/static/media/rn.d39c683a6da6ca9f717a.png",
+    "static/media/meet.png": "/itisyara/static/media/meet.ef61e7afa3d1e248d8ca.png",
+    "static/media/gs.png": "/itisyara/static/media/gs.01b18be8fb3a302fecd9.png",
+    "static/media/click.wav": "/itisyara/static/media/click.6b885d08b1dd5737c869.wav",
+    "static/media/ang.png": "/itisyara/static/media/ang.86e0c7f630a3da839183.png",
+    "static/media/re.png": "/itisyara/static/media/re.702a26a65699561606d2.png",
+    "static/media/tr.png": "/itisyara/static/media/tr.ee60a1911adcbd92d2d7.png",
+    "static/media/ht.png": "/itisyara/static/media/ht.c1ef11e910005d746d34.png",
+    "static/media/sc.png": "/itisyara/static/media/sc.5bb49100c22c0c12bbc5.png",
+    "static/media/paper.mp3": "/itisyara/static/media/paper.6fb8be00e824c9b0da90.mp3",
+    "static/media/myAng.png": "/itisyara/static/media/myAng.90b4ef22b8607d6bd461.png",
+    "static/media/css.png": "/itisyara/static/media/css.90dde37a6f94a61140e1.png",
+    "static/media/jq.png": "/itisyara/static/media/jq.2d48b859a74cc76d9104.png",
+    "static/media/ind.png": "/itisyara/static/media/ind.d9f4fed3384cdab77568.png",
+    "static/media/hk.png": "/itisyara/static/media/hk.c388a8e3523ccb889590.png",
+    "static/media/fb.png": "/itisyara/static/media/fb.c3627fa8ae99a8095a89.png",
+    "static/media/nj.png": "/itisyara/static/media/nj.04d441d4bc279ab878b5.png",
+    "static/media/ex.png": "/itisyara/static/media/ex.7aa676f01551f463646d.png",
+    "static/media/todo.png": "/itisyara/static/media/todo.e6714fb17508bb79b14c.png",
+    "static/media/js.png": "/itisyara/static/media/js.85764d1cce8e0cbb2db6.png",
+    "static/media/git.png": "/itisyara/static/media/git.97bf9b06b9d467f97d5c.png",
+    "index.html": "/itisyara/index.html",
+    "main.016e33db.css.map": "/itisyara/static/css/main.016e33db.css.map",
+    "main.00e5dbe6.js.map": "/itisyara/static/js/main.00e5dbe6.js.map",
+    "885.1f14c024.chunk.js.map": "/itisyara/static/js/885.1f14c024.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.016e33db.css",
+    "static/js/main.00e5dbe6.js"
+  ]
+}
