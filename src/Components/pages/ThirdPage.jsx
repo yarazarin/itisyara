@@ -6,7 +6,8 @@ import meet from "../../img/meet.png";
 import myFlix from "../../img/myFlix.png";
 import myAng from "../../img/myAng.png";
 import todo from "../../img/todo.png";
-import sticker from "../../img/sticker.png";
+import HorizonalMenu from "../HorizontalMenu";
+import Arrow from "../Arrow";
 
 const projects = [
   {
@@ -15,7 +16,10 @@ const projects = [
     image: myFlix,
     url: "https://yaramyflix.netlify.app",
     paragraphs: [
-      "myFlix is a web application developed with HTML, CSS, JavaScript, and React.js. It utilizes RESTful APIs for fetching and managing movie data, ensuring seamless browsing and interaction. Supported by Node.js, Express, and MongoDB, myFlix offers a secure and dynamic platform for users to explore their favorite films.",
+      "<h4>Introduction:</h4> myFlix is a MERN stack application showcasing my full-stack JavaScript skills.",
+      "<h4>Challenge:</h4> The goal was to build a robust, user-friendly web application.",
+      "<h4>Approach:</h4> I constructed a RESTful API using Node.js, Express, and MongoDB. The client-side interface was built with React.",
+      "<h4>Results:</h4> Overcame challenges in crafting clean code and ensuring robust security measures.",
     ],
   },
   {
@@ -24,7 +28,10 @@ const projects = [
     image: myAng,
     url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
     paragraphs: [
-      "myFlix Angular is a web application that allows users to access information about different movies, directors, and genres. Users are able to sign up, update their personal information, and create a list of their favorite movies.",
+      "<h4>Introduction:</h4> myFlix Angular is a web application providing comprehensive movie information.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can access information about different movies, directors, and genres.",
+      "<h4>Approach:</h4> The application was built using Angular, allowing users to sign up, update their personal information, and create a list of their favorite movies.",
+      "<h4>Results:</h4> Successfully created a user-friendly platform for movie enthusiasts.",
     ],
   },
   {
@@ -33,8 +40,10 @@ const projects = [
     image: meet,
     url: "https://yarazarin.github.io/meet",
     paragraphs: [
-      "Log in with Google Authentication, show chart of meetings, search by city or country, filter the cities by name and number of cities.",
-      "This application was built using modern testing technologies to ensure reliability and performance.",
+      "<h4>Introduction:</h4> This is a web application that utilizes Google Authentication.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can log in, view a chart of meetings, and search and filter cities.",
+      "<h4>Approach:</h4> The application was built using modern testing technologies to ensure reliability and performance.",
+      "<h4>Results:</h4> Successfully created a user-friendly platform with Google Authentication, meeting charts, and city search and filter functionalities.",
     ],
   },
   {
@@ -43,7 +52,10 @@ const projects = [
     image: todo,
     url: "https://yarazarin.github.io/to-do-list-app",
     paragraphs: [
-      "add, edit, delete, mark as done, filter by all, active, completed, clear completed, save to local storage.",
+      "<h4>Introduction:</h4> This is a web application with a focus on task management.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can add, edit, delete, and mark tasks as done, filter tasks, and save tasks to local storage.",
+      "<h4>Approach:</h4> The application was built with a focus on user-friendly task management functionalities.",
+      "<h4>Results:</h4> Successfully created a task management platform with functionalities to add, edit, delete, mark tasks as done, filter tasks, and save tasks to local storage.",
     ],
   },
   {
@@ -52,7 +64,10 @@ const projects = [
     image: chat,
     url: "https://github.com/yarazarin/CHAT",
     paragraphs: [
-      "log in as a guest, send and receive messages, pictures and using camera on expo go app.",
+      "<h4>Introduction:</h4> This is a messenger application.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can log in as a guest, send and receive messages and pictures, and use the camera on the Expo Go app.",
+      "<h4>Approach:</h4> The application was built with a focus on user-friendly communication functionalities.",
+      "<h4>Results:</h4> Successfully created a communication platform with functionalities to log in as a guest, send and receive messages and pictures, and use the camera on the Expo Go app.",
     ],
   },
   {
@@ -61,7 +76,10 @@ const projects = [
     image: api,
     url: "https://yarazarin.github.io/simple-js-app",
     paragraphs: [
-      "search for any API and get the data in JSON format, used bootstrap.",
+      "<h4>Introduction:</h4> This is a web application with a focus on API data retrieval.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can search for any API and get the data in JSON format.",
+      "<h4>Approach:</h4> The application was built using Bootstrap for a user-friendly interface.",
+      "<h4>Results:</h4> Successfully created a platform that allows users to search for any API and get the data in JSON format.",
     ],
   },
 ];
@@ -95,46 +113,59 @@ const ThirdPage = () => {
   }, []);
 
   return (
-    <div className="new-third-page">
-      <div className="project-list">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="project-item"
-            onClick={() => handleClick(project)}
-          >
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </div>
-        ))}
-      </div>
-      {selectedProject && (
-        <div className="modal">
-          <div className="modal-content" ref={modalContentRef}>
-            <span className="close-button" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>{selectedProject.title}</h2>
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              className="inner-modal-image"
-            />
-            {selectedProject.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-            <a
-              href={selectedProject.url}
-              target="_blank"
-              rel="noopener noreferrer"
+    <>
+      <h1>
+        Some Of My Projects Are Here <i class="fa-solid fa-turn-down"></i>
+      </h1>
+      <div className="new-third-page">
+        <div className="project-list">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="project-item"
+              onClick={() => handleClick(project)}
             >
-              Visit Project
-            </a>
-          </div>
+              <img src={project.image} alt={project.title} />
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+        {selectedProject && (
+          <div className="modal">
+            <div className="modal-content" ref={modalContentRef}>
+              <span className="close-button" onClick={closeModal}>
+                &times;
+              </span>
+              <h2>{selectedProject.title}</h2>
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="inner-modal-image"
+              />
+              {selectedProject.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                ></p>
+              ))}
+              <a
+                className="visit-project"
+                href={selectedProject.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Project
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="third-page-arrow-container">
+        <Arrow />
+      </div>
+      <HorizonalMenu />
+    </>
   );
 };
 

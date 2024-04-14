@@ -149,7 +149,7 @@ const ContactForm = () => {
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
             onChange={setCaptchaValue}
-            theme="dark" // Use the "dark" theme
+            theme="dark"
           />
           <button type="submit" className="btn-submit">
             Submit<i class="fa-solid fa-paper-plane"></i>

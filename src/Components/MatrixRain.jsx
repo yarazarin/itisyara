@@ -71,7 +71,6 @@ const MatrixRain = () => {
 
 export default MatrixRain;
 
-// Add the CSS styles here as well
 const styles = `
   canvas {
     position: fixed;

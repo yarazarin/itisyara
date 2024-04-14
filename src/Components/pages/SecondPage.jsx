@@ -64,6 +64,12 @@ const SecondPage = () => {
           <h3>My Expertise:</h3>
           <ul>
             <li>
+              <strong>AWS:</strong> Hosting S3, EC2, VPC Hosting, MongoDB, React
+              Client, AWS SDK for JavaScript, AWS Lambda Functions, Scalability
+              and Security, Custom VPCs, Application Load Balancers, Identity
+              and Access Management
+            </li>
+            <li>
               <strong>Frontend :</strong> Bootstrap, React, Angular, React
               Native, jQuery, HTML, CSS
             </li>
@@ -75,9 +81,6 @@ const SecondPage = () => {
               <strong>Databases:</strong> MongoDB, Google Firestore
             </li>
             <li>
-              <strong>AWS :</strong> S3, EC2, Lambda
-            </li>
-            <li>
               <strong>Tools :</strong> Git, GitHub, Testing, Adobe Photoshop,
               Adobe Indesign, Trello, Slack, Microsoft Office, Google work
               spaces, Canva
@@ -86,7 +89,6 @@ const SecondPage = () => {
               <strong>Other :</strong> Project Management
             </li>
           </ul>
-
         </div>
       </div>
       <Arrow />

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./HorizontalMenu.css"; // Import your CSS file for styling
+import "./HorizontalMenu.css";
 import ang from "../img/logo/ang.png";
 import aw from "../img/logo/aw.png";
 import bs from "../img/logo/bs.png";
