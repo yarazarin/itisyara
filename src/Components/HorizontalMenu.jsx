@@ -60,7 +60,7 @@ const HorizontalMenuCarousel = () => {
           <li>Html</li>
           <li>Css</li>
           <li>Scss</li>
-          <li>Javascript</li>
+          <li>JavaScript</li>
           <li>React</li>
           <li>React.Native</li>
           <li>Node.Js</li>
@@ -79,17 +79,17 @@ const HorizontalMenuCarousel = () => {
           <li>Github</li>
           <li>Heroku</li>
           <li>Postman</li>
-          <li>AdobePhotoshop</li>
-          <li>AdobeIndesign</li>
+          <li>Adobe.Photoshop</li>
+          <li>Adobe.Indesign</li>
           <li>Figma</li>
           <li>Canva</li>
-          <li>GoogleWork</li>
+          <li>Google.Work</li>
           <li>Linux</li>
           <li>MacOS</li>
           <li>Windows</li>
           <li>IOS</li>
           <li>Android</li>
-          <li>Microsoft Office</li>
+          <li>Microsoft.Office</li>
           <li>Zoom</li>
           <li>Teams</li>
           <li>Slack</li>
@@ -101,26 +101,26 @@ const HorizontalMenuCarousel = () => {
         data-speed="slow"
       >
         <div className="scroller__inner_carousel scroller__inner_carousel-background">
-          <img src={js} alt="" style={{ height: "50px" }} />
-          <img src={ex} alt="" style={{ height: "50px" }} />
-          <img src={fb} alt="" style={{ height: "50px" }} />
-          <img src={gh} alt="" style={{ height: "50px" }} />
-          <img src={git} alt="" style={{ height: "50px" }} />
-          <img src={gs} alt="" style={{ height: "50px" }} />
-          <img src={ind} alt="" style={{ height: "50px" }} />
-          <img src={jq} alt="" style={{ height: "50px" }} />
-          <img src={mdb} alt="" style={{ height: "50px" }} />
-          <img src={nj} alt="" style={{ height: "50px" }} />
-          <img src={ps} alt="" style={{ height: "50px" }} />
-          <img src={re} alt="" style={{ height: "50px" }} />
-          <img src={rn} alt="" style={{ height: "50px" }} />
-          <img src={sc} alt="" style={{ height: "50px" }} />
-          <img src={ang} alt="" style={{ height: "50px" }} />
-          <img src={aw} alt="" style={{ height: "50px" }} />
-          <img src={bs} alt="" style={{ height: "50px" }} />
-          <img src={hk} alt="" style={{ height: "50px" }} />
-          <img src={css} alt="" style={{ height: "50px" }} />
-          <img src={ht} alt="" style={{ height: "50px" }} />
+          <img src={js} alt="" />
+          <img src={ex} alt="" />
+          <img src={fb} alt="" />
+          <img src={gh} alt="" />
+          <img src={git} alt="" />
+          <img src={gs} alt="" />
+          <img src={ind} alt="" />
+          <img src={jq} alt="" />
+          <img src={mdb} alt="" />
+          <img src={nj} alt="" />
+          <img src={ps} alt="" />
+          <img src={re} alt="" />
+          <img src={rn} alt="" />
+          <img src={sc} alt="" />
+          <img src={ang} alt="" />
+          <img src={aw} alt="" />
+          <img src={bs} alt="" />
+          <img src={hk} alt="" />
+          <img src={css} alt="" />
+          <img src={ht} alt="" />
         </div>
       </div>
     </>

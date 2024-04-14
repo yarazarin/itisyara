@@ -36,7 +36,15 @@ const Navbar = ({ scrollTo, currentPage }) => {
           <i className="fas fa-envelope"></i>
           <span className="nav-label">Contact</span>
         </li>
+        <li
+          className={currentPage === 4 ? "active" : ""}
+          onClick={() => { alert("Soon.. :)"); play(); }}
+        >
+          <i className="fas fa-blog"></i>
+          <span className="nav-label">Blog</span>
+        </li>
       </ul>
+
     </nav>
   );
 };

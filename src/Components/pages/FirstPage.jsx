@@ -3,10 +3,11 @@ import "./FirstPage.css";
 import yara_sample_resume from "../../doc/yara_sample_resume.pdf";
 import paper from "../../sound/paper.mp3";
 import Arrow from "../Arrow";
+import MatrixRain from "../MatrixRain";
 
 const FirstPage = () => {
   const [typedText, setTypedText] = useState([]);
-  const textLines = ["Hello,", "I Am Yara,", "A Full Stack Developer"];
+  const textLines = ["Hello,", "I Am Yara", "A Full Stack Developer"];
 
   useEffect(() => {
     const sectionsLeaf = [...document.querySelectorAll(".leaf")];
@@ -68,6 +69,7 @@ const FirstPage = () => {
 
   return (
     <section className="first page" id="sec1">
+      <MatrixRain />
       <div className="title title_a">
         <div className="typed-text-container">
           {typedText.map((line, index) => (
