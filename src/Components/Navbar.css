@@ -11,7 +11,7 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 12px;
+  gap: 5px;
   padding: 0;
   padding-top: 20px;
   margin: 0;
@@ -20,13 +20,13 @@ nav ul {
 nav ul li {
   color: #fff;
   padding: 5px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
   transition: 0.5s;
   box-shadow: #a8a8a856 0px 1px 0px 1px;
   text-align: center;
-  width: 100px;
+  width: 90px;
   height: 43px;
   border-top-left-radius: 50% 90%;
   border-bottom-right-radius: 50% 100%;
@@ -50,5 +50,7 @@ nav ul li:hover {
 }
 
 .active {
-  color: #ff0000;
+  background-color: #bc0000;
+  zoom: 1.1;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 }

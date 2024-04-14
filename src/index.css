@@ -1,15 +1,14 @@
-
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 button {
@@ -152,4 +151,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* End reset default browser decoration  - - - - - - - - - - - - - */

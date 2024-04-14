@@ -20,6 +20,7 @@ import re from "../img/logo/re.png";
 import rn from "../img/logo/rn.png";
 import sc from "../img/logo/sc.png";
 import hk from "../img/logo/hk.png";
+import tr from "../img/logo/tr.png";
 
 const HorizontalMenuCarousel = () => {
   useEffect(() => {
@@ -93,6 +94,7 @@ const HorizontalMenuCarousel = () => {
           <li>Zoom</li>
           <li>Teams</li>
           <li>Slack</li>
+          <li>Trello</li>
         </ul>
       </div>
       <div
@@ -121,6 +123,7 @@ const HorizontalMenuCarousel = () => {
           <img src={hk} alt="" />
           <img src={css} alt="" />
           <img src={ht} alt="" />
+          <img src={tr} alt="" />
         </div>
       </div>
     </>
