@@ -87,9 +87,12 @@ const App = () => {
       const btnClick = (e) => gotoNum(parseInt(e.target.dataset.slide));
       pages.ontouchstart = (e) => (touchstart = e.touches[0].screenY);
       pages.ontouchend = (e) => {
-        return touchstart < e.changedTouches[0].screenY
-          ? gotoPrev()
-          : gotoNext();
+        const touchend = e.changedTouches[0].screenY;
+        const touchDifference = Math.abs(touchstart - touchend);
+        if (touchDifference < 5) {
+          return;
+        }
+        return touchstart < touchend ? gotoPrev() : gotoNext();
       };
       pages.onmousewheel = pages.onwheel = (e) => {
         return e.deltaY < 0 ? gotoPrev() : gotoNext();
