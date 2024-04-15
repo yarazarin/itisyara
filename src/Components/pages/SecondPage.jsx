@@ -48,7 +48,7 @@ const SecondPage = () => {
   return (
     <div className="second_page">
       <div className="second_container">
-        <div ref={partOneRef} className="part_one">
+        <div ref={partOneRef} className="part">
           <h1>Welcome</h1>
           <p>
             I'm a proactive Full-Stack Web Developer specializing in the M.E.R.N
@@ -60,7 +60,7 @@ const SecondPage = () => {
             innovative web solutions and drive positive change.
           </p>
         </div>
-        <div ref={partTwoRef} className="part_two">
+        <div ref={partTwoRef} className="part">
           <h3>My Expertise:</h3>
           <ul>
             <li>

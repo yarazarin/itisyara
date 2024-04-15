@@ -1,4 +1,3 @@
-/* SecondPage.css */
 .second_page {
   height: 100vh;
   width: 100%;
@@ -10,76 +9,48 @@
 }
 
 .second_container {
-  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  width: 70%;
-  top: 10%;
+  width: 85%;
+  margin: 0 auto;
 }
 
-.part_one,
-.part_two {
+.part {
   white-space: pre-line;
   color: #dddddde2;
-  text-align: center;
-  max-width: 70%;
+  text-align: left;
+  max-width: 45%;
   opacity: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 10px 0 #000000;
+  transition: all 0.5s ease-in-out;
 }
 
-.part_one {
-  position: relative;
-  text-align: left;
-  width: 40%;
-  height: 70%;
-  font-size: 18px;
+.part h1,
+.part h3 {
+  font-size: 1.5rem;
+}
+
+.part p,
+.part ul {
+  font-size: 1rem;
   line-height: 1.5;
-}
-
-.part_one p {
-font-size: 18px;
-padding: 0 20p;
-}
-
-.part_two {
-  position: relative;
-  width: 40%;
-  text-align: left;
-  height: 70%;
-  line-height: 1.5;
-
-}
-
-.part_two li {
-  position: relative;
-  list-style-type:disc;
-  font-size: 16px;
-  left: 20px;
-}
-
-.part_two ul {
-  padding: 0px;
-  margin: 0px;
-  font-size: 10px;
-}
-
-.part_two strong{
-  font-weight: 900;
 }
 
 .visible {
   opacity: 1;
 }
 
-.visible.part_one {
+.visible.part:nth-child(1) {
   animation: slideFromLeft 1s ease-in-out forwards;
 }
 
-.visible.part_two {
+.visible.part:nth-child(2) {
   animation: slideFromRight 1s ease-in-out forwards;
 }
-
 
 @keyframes slideFromLeft {
   from {
@@ -102,40 +73,23 @@ padding: 0 20p;
     opacity: 1;
   }
 }
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 768px) {
   .second_container {
     flex-direction: column;
   }
 
-  .part_one {
-    width: 100%;
-    height: 30%;
-    margin-top: 100px;
-    zoom: 0.7;
+  .part {
+    max-width: 95%;
   }
 
-  .part_two {
-    width: 100%;
-    margin-top: 50px;
-    zoom: 0.7;
+  .part h1,
+  .part h3 {
+    font-size: 1.2rem;
+  }
+
+  .part p,
+  .part ul {
+    font-size: 0.65rem;
   }
 }
-
-
-@media (max-width: 768px) { 
-  
-  .second_container{
-    width: 105%;
-  }
-
-  }
-  .part_one,
-  .part_two {
-    font-size: 20px;
-  }
-
-  .part_one p,
-  .part_two li,
-  .part_two ul {
-    font-size: 17px;
-  }
