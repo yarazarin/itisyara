@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/itisyara/static/css/main.8de5f0bc.css",
-    "main.js": "/itisyara/static/js/main.dae27f9b.js",
+    "main.js": "/itisyara/static/js/main.40663e9b.js",
     "static/js/885.1f14c024.chunk.js": "/itisyara/static/js/885.1f14c024.chunk.js",
     "static/media/api.png": "/itisyara/static/media/api.7eabf7dedba656939a0b.png",
-    "static/media/yara_sample_resume.pdf": "/itisyara/static/media/yara_sample_resume.5c4ac057c947cf2f8208.pdf",
+    "static/media/Yara_Resume.pdf": "/itisyara/static/media/Yara_Resume.c81e64b088aea869d439.pdf",
     "static/media/chat.png": "/itisyara/static/media/chat.10fddd9816842412543a.png",
     "static/media/aw.png": "/itisyara/static/media/aw.12b08a9ff9b85f116592.png",
     "static/media/mdb.png": "/itisyara/static/media/mdb.41e505b098e3087319b8.png",
@@ -31,11 +31,11 @@
     "static/media/git.png": "/itisyara/static/media/git.97bf9b06b9d467f97d5c.png",
     "index.html": "/itisyara/index.html",
     "main.8de5f0bc.css.map": "/itisyara/static/css/main.8de5f0bc.css.map",
-    "main.dae27f9b.js.map": "/itisyara/static/js/main.dae27f9b.js.map",
+    "main.40663e9b.js.map": "/itisyara/static/js/main.40663e9b.js.map",
     "885.1f14c024.chunk.js.map": "/itisyara/static/js/885.1f14c024.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8de5f0bc.css",
-    "static/js/main.dae27f9b.js"
+    "static/js/main.40663e9b.js"
   ]
 }
