@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./FirstPage.css";
-import yara_sample_resume from "../../doc/yara_sample_resume.pdf";
+import Yara_Resume from "../../doc/Yara_resime.pdf";
 import paper from "../../sound/paper.mp3";
 import Arrow from "../Arrow";
 import MatrixRain from "../MatrixRain";
@@ -35,7 +35,7 @@ const FirstPage = () => {
       observerLeaf.observe(section);
     });
 
-    const typingDelay = 100; // typing speed
+    const typingDelay = 150; // typing speed
 
     const typeText = (lineIndex, charIndex) => {
       if (lineIndex < textLines.length) {
@@ -87,7 +87,7 @@ const FirstPage = () => {
         <br />
         <a
           className="resume_button"
-          href={yara_sample_resume}
+          href={Yara_Resume}
           download
           onClick={handleButtonClick}
         >
