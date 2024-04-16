@@ -114,8 +114,8 @@ const ThirdPage = () => {
 
   return (
     <>
-      <h1>
-        Some Of My Projects Are Here <i class="fa-solid fa-turn-down"></i>
+      <h1 className="project-h1">
+        Some Of My Projects Are Here <i class="fa-solid fa-turn-down" style={{ color: 'green' }}></i>
       </h1>
       <div className="new-third-page">
         <div className="project-list">

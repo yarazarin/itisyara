@@ -89,7 +89,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  bottom: 70px;
+  bottom: 100px;
   left: 51.2%;
   transform: translateX(-50%) scale(0.6);
 }

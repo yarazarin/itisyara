@@ -1,15 +1,4 @@
-.bw_img {
-  top:-1100px;
-  position: relative;
-  display: block;
-  opacity: 0.7;
-  filter: brightness(1.2);
-  z-index: 0;
-  left: 0%;
-  width: 300px;
-  height: 450vh;
-  filter: blur(20px);
-}
+
 
 /* Welcome Text */
 .hi {
@@ -47,7 +36,7 @@ section.is-visible h2 {
 
 /* Pages Container */
 .pages {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   position: relative;
   overflow: hidden;

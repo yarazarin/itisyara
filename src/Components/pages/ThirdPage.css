@@ -7,6 +7,22 @@
   height: 90vh;
   scale: 0.5;
 }
+@media (max-width: 600px) {
+  .new-third-page {
+    scale: 0.4;
+    left:-3px;
+  }
+  .project-h1{
+    font-size: 1.2rem;
+    top: 75px;
+  }
+}
+
+.project-h1{
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
 
 .project-list {
   display: grid;

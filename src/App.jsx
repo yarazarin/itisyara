@@ -13,6 +13,12 @@ const App = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener("resize", () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
     const sections = [...document.querySelectorAll("section")];
     let options = {
       rootMargin: "0px",

@@ -21,30 +21,22 @@ import rn from "../img/logo/rn.png";
 import sc from "../img/logo/sc.png";
 import hk from "../img/logo/hk.png";
 import tr from "../img/logo/tr.png";
+import pm from "../img/logo/pm.png";
 
 const HorizontalMenuCarousel = () => {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller_carousel");
-
-    // If a user hasn't opted in for reduced motion, then we add the animation
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       addAnimation();
     }
 
     function addAnimation() {
       scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", true);
-
-        // Make an array from the elements within `.scroller-inner`
         const scrollerInner = scroller.querySelector(
           ".scroller__inner_carousel"
         );
         const scrollerContent = Array.from(scrollerInner.children);
-
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
         scrollerContent.forEach((item) => {
           const duplicatedItem = item.cloneNode(true);
           duplicatedItem.setAttribute("aria-hidden", true);
@@ -75,7 +67,7 @@ const HorizontalMenuCarousel = () => {
           <li>Lambda</li>
           <li>S3</li>
           <li>Serverless</li>
-          <li>GoogleFirestore</li>
+          <li>GoogleFirebase</li>
           <li>Git</li>
           <li>Github</li>
           <li>Heroku</li>
@@ -91,9 +83,6 @@ const HorizontalMenuCarousel = () => {
           <li>IOS</li>
           <li>Android</li>
           <li>Microsoft.Office</li>
-          <li>Zoom</li>
-          <li>Teams</li>
-          <li>Slack</li>
           <li>Trello</li>
         </ul>
       </div>
@@ -103,27 +92,28 @@ const HorizontalMenuCarousel = () => {
         data-speed="slow"
       >
         <div className="scroller__inner_carousel scroller__inner_carousel-background">
-          <img src={js} alt="" />
-          <img src={ex} alt="" />
-          <img src={fb} alt="" />
-          <img src={gh} alt="" />
-          <img src={git} alt="" />
-          <img src={gs} alt="" />
-          <img src={ind} alt="" />
-          <img src={jq} alt="" />
-          <img src={mdb} alt="" />
-          <img src={nj} alt="" />
-          <img src={ps} alt="" />
-          <img src={re} alt="" />
-          <img src={rn} alt="" />
-          <img src={sc} alt="" />
-          <img src={ang} alt="" />
-          <img src={aw} alt="" />
-          <img src={bs} alt="" />
-          <img src={hk} alt="" />
-          <img src={css} alt="" />
-          <img src={ht} alt="" />
-          <img src={tr} alt="" />
+          <img src={aw} alt="AWS" />
+          <img src={git} alt="Git" />
+          <img src={gh} alt="GitHub" />
+          <img src={ht} alt="HTML" />
+          <img src={css} alt="CSS" />
+          <img src={sc} alt="SCSS" />
+          <img src={bs} alt="Bootstrap" />
+          <img src={js} alt="JavaScript" />
+          <img src={nj} alt="NodeJS" />
+          <img src={re} alt="React" />
+          <img src={rn} alt="React Native" />
+          <img src={ex} alt="Express" />
+          <img src={ang} alt="Angular" />
+          <img src={hk} alt="Heroku" />
+          <img src={pm} alt="Postman" />
+          <img src={mdb} alt="MongoDB" />
+          <img src={fb} alt="Firebase" />
+          <img src={jq} alt="JQuery" />
+          <img src={gs} alt="Google Workspace" />
+          <img src={ind} alt="Indesign" />
+          <img src={ps} alt="Photoshop" />
+          <img src={tr} alt="Trello" />
         </div>
       </div>
     </>
