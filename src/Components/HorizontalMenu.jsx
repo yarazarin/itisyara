@@ -67,22 +67,22 @@ const HorizontalMenuCarousel = () => {
           <li>Lambda</li>
           <li>S3</li>
           <li>Serverless</li>
-          <li>GoogleFirebase</li>
+          <li>G.Firebase</li>
           <li>Git</li>
           <li>Github</li>
           <li>Heroku</li>
           <li>Postman</li>
-          <li>Adobe.Photoshop</li>
-          <li>Adobe.Indesign</li>
+          <li>Photoshop</li>
+          <li>Indesign</li>
           <li>Figma</li>
           <li>Canva</li>
-          <li>Google.Work</li>
+          <li>G.Work</li>
           <li>Linux</li>
           <li>MacOS</li>
           <li>Windows</li>
           <li>IOS</li>
           <li>Android</li>
-          <li>Microsoft.Office</li>
+          <li>MS.Office</li>
           <li>Trello</li>
         </ul>
       </div>
