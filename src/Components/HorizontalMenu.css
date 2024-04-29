@@ -100,3 +100,36 @@
 .scroller_carousel:hover .scroller__inner_carousel {
   animation-play-state: paused;
 }
+
+
+/* Existing styles */
+
+/* Media query for phone sizes */
+@media (max-width: 600px) {
+
+  .tag-list{
+    left: -25px;
+  }
+  .scroller__inner_carousel-background{
+    padding: 2px;
+    left: -10px;
+  }
+
+  .scroller_carousel {
+    max-width: 80px;
+  }
+
+  .scroller__inner_carousel-background img {
+    width: 18px;
+  }
+
+  .scroller__inner_carousel-background img:hover {
+    width: 30px ;
+  }
+
+  .tag-list li {
+    font-size: 12px;
+    padding: 1rem; 
+    margin: 0.5rem; 
+  }
+}

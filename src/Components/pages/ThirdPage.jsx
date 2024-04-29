@@ -23,18 +23,6 @@ const projects = [
     ],
   },
   {
-    title: "myFlix Angular",
-    description: "myFlix Angular",
-    image: myAng,
-    url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
-    paragraphs: [
-      "<h4>Introduction:</h4> myFlix Angular is a web application providing comprehensive movie information.",
-      "<h4>Challenge:</h4> The goal was to create a platform where users can access information about different movies, directors, and genres.",
-      "<h4>Approach:</h4> The application was built using Angular, allowing users to sign up, update their personal information, and create a list of their favorite movies.",
-      "<h4>Results:</h4> Successfully created a user-friendly platform for movie enthusiasts.",
-    ],
-  },
-  {
     title: "Meet App",
     description: "Meet App",
     image: meet,
@@ -56,6 +44,18 @@ const projects = [
       "<h4>Challenge:</h4> The goal was to create a platform where users can add, edit, delete, and mark tasks as done, filter tasks, and save tasks to local storage.",
       "<h4>Approach:</h4> The application was built with a focus on user-friendly task management functionalities.",
       "<h4>Results:</h4> Successfully created a task management platform with functionalities to add, edit, delete, mark tasks as done, filter tasks, and save tasks to local storage.",
+    ],
+  },
+  {
+    title: "myFlix Angular",
+    description: "myFlix Angular",
+    image: myAng,
+    url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
+    paragraphs: [
+      "<h4>Introduction:</h4> myFlix Angular is a web application providing comprehensive movie information.",
+      "<h4>Challenge:</h4> The goal was to create a platform where users can access information about different movies, directors, and genres.",
+      "<h4>Approach:</h4> The application was built using Angular, allowing users to sign up, update their personal information, and create a list of their favorite movies.",
+      "<h4>Results:</h4> Successfully created a user-friendly platform for movie enthusiasts.",
     ],
   },
   {

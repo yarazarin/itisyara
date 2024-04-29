@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100dvh;
   scale: 0.5;
 }
 @media (max-width: 600px) {
@@ -32,7 +32,7 @@
   max-width: 1200px;
   min-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
   top: -25%;
 }
 
@@ -41,13 +41,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 5px 5px 10px rgba(47, 0, 255, 0.392);
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: #c4000074;
+  padding: 50px;
+  transition: transform 0.3s, box-shadow 0.2s;
+  background-color: #ffffff74;
   position: relative;
-  z-index: 1;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
@@ -55,17 +52,17 @@
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(47, 0, 255, 0.592);
+  box-shadow: 0px 0px 100px rgb(255, 0, 0);
 }
 
 .project-item img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 10px;
 }
 
 .project-item h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 5px;
   color: #ffffff;
 }
@@ -74,13 +71,9 @@
   font-size: 1rem;
   color: #ffffffae;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
-/* Button Styles */
-button:hover {
-  background-color: #0056b3;
-}
 
 /* Modal Styles */
 .modal {
@@ -206,6 +199,9 @@ button:hover {
 
 /* Visit Project Button */
 .visit-project {
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
   padding: 5px 20px;
   background-color: #007bff;
   color: #fff;
@@ -213,8 +209,13 @@ button:hover {
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.8rem;
-  box-shadow: #000000 0px 0px 10px;
-  animation: heartbeat 1s infinite;
+  box-shadow: #7856ffb8 0px 0px 10px;
+  animation: heartbeat 3s infinite;
+  transition: 0.3s ;
+}
+.visit-project:hover {
+  animation: none;
+  box-shadow: #743eff7e 0px 0px 80px;
 }
 
 /* Close Button */
@@ -223,14 +224,14 @@ button:hover {
   color: #000000;
   font-size: 3rem;
   cursor: pointer;
-  background-color: rgb(184, 184, 184);
+  background-color: #b8b8b8;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .close-button:hover {
