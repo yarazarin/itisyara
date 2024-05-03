@@ -9,13 +9,15 @@ const MatrixRain = () => {
     // making the canvas full screen
     canvas.height = window.innerHeight * 5;
     canvas.width = window.innerWidth;
+    
 
     // characters to display
     const matrix = "0101ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ";
     const characters = matrix.split("");
 
     const font_size = 15;
-    const columns = canvas.width / font_size / 7;
+    const column_distance = 1.5 * font_size;
+    const columns = canvas.width / font_size;
     const drops = [];
 
     for (let x = 0; x < columns; x++) {
@@ -33,15 +35,15 @@ const MatrixRain = () => {
     setInterval(resetDrops, 10000);
 
     function draw() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#0F83"; // green matrix text color is: #0F0
+      ctx.fillStyle = "#fff2"; // green matrix text color is: #0F0
       ctx.font = font_size + "px arial";
 
       for (let i = 0; i < drops.length; i++) {
         const text = characters[Math.floor(Math.random() * characters.length)];
-        ctx.fillText(text, i * font_size, drops[i] * font_size);
+        ctx.fillText(text, i * column_distance, drops[i] * font_size);
 
         if (drops[i] * font_size > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
@@ -51,7 +53,7 @@ const MatrixRain = () => {
       }
     }
 
-    const intervalId = setInterval(draw, 200);
+    const intervalId = setInterval(draw, 150);
 
     return () => {
       clearInterval(intervalId); // Clear the interval on unmount

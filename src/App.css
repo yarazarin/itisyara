@@ -74,15 +74,15 @@ section.is-visible h2 {
 }
 
 
-/* Pagination Styles */
-.pagination {
+/* dotdot Styles */
+.dotdot {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.pagination > li {
+.dotdot > li {
   list-style: none;
   height: 10px;
   width: 10px;
@@ -96,7 +96,7 @@ section.is-visible h2 {
   cursor: pointer;
 }
 
-.pagination > li.active {
+.dotdot > li.active {
   position: relative;
   background: hsl(0, 100%, 24%);
   transform: scale(150%);

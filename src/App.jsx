@@ -41,7 +41,7 @@ const App = () => {
 
     const Slider = function (
       pages,
-      pagination,
+      dotdot,
       setCurrentPage,
       setIsScrolling
     ) {
@@ -61,7 +61,7 @@ const App = () => {
           btn.dataset.slide = i;
           btn.addEventListener("click", btnClick);
           btns.push(btn);
-          pagination.appendChild(btn);
+          dotdot.appendChild(btn);
         }
         btns[0].classList.add("active");
       };
@@ -109,10 +109,10 @@ const App = () => {
     };
 
     let pages = document.querySelector(".pages");
-    let pagination = document.querySelector(".pagination");
+    let dotdot = document.querySelector(".dotdot");
     sliderRef.current = new Slider(
       pages,
-      pagination,
+      dotdot,
       setCurrentPage,
       setIsScrolling
     ); // Pass setIsScrolling to Slider
@@ -146,7 +146,7 @@ const App = () => {
           <ContactForm />
         </section>
       </div>
-      <ul className="pagination"></ul>
+      <ul className="dotdot"></ul>
       <Footer />
     </>
   );

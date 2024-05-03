@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "./SecondPage.css";
 import Arrow from "../Arrow";
+import HorizontalMenue from "../HorizontalMenu";
 
 const SecondPage = () => {
   const partOneRef = useRef(null);
@@ -46,10 +47,11 @@ const SecondPage = () => {
   }, []);
 
   return (
+    <>
     <div className="second_page">
       <div className="second_container">
         <div ref={partOneRef} className="part">
-          <h1>Welcome</h1>
+          <titr>Welcome</titr>
           <p>
             I'm a proactive Full-Stack Web Developer specializing in the M.E.R.N
             stack with extensive experience in AWS deployment. With a background
@@ -61,7 +63,7 @@ const SecondPage = () => {
           </p>
         </div>
         <div ref={partTwoRef} className="part">
-          <h3>My Expertise:</h3>
+          <titr>My Expertise:</titr>
           <ul>
             <li>
               <strong>AWS:</strong> Hosting S3, EC2, VPC Hosting, MongoDB, React
@@ -92,7 +94,9 @@ const SecondPage = () => {
         </div>
       </div>
       <Arrow />
+      <HorizontalMenue />
     </div>
+    </>
   );
 };
 

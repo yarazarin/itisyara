@@ -1,6 +1,28 @@
+import React, { useState, useEffect } from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  const formatTime = (time) => {
+    const year = time.getFullYear();
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const month = months[time.getMonth()];
+    const day = time.getDate().toString().padStart(2, '0');
+    const hours = time.getHours();
+    const minutes = time.getMinutes().toString().padStart(2, '0');
+    const seconds = time.getSeconds().toString().padStart(2, '0');
+    return `${year} ~ ${month} ${day}   ${hours}:${minutes}:${seconds}`;
+  };
+
   return (
     <div className="footer">
       <div className="ico">
@@ -28,7 +50,7 @@ const Footer = () => {
 
       </div>
       <div className="Rights">
-        <pre> Yara Zarin - 2023</pre>
+      <pre>Yara Zarin     {formatTime(time)}</pre>
       </div>
     </div>
   );

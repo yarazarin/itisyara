@@ -1,16 +1,12 @@
 .scroller_carousel {
-  width: 100%;
-  max-width: 100px;
-  height: 95%;
+  width: 50%;
+  height: 100px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  position: absolute;
+  bottom: 65px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index:2;
@@ -19,11 +15,10 @@
 .scroller__inner_carousel {
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   text-align: center;
   position: relative;
-
 }
 
 .scroller__inner_carousel-background {
@@ -82,54 +77,29 @@
 
 @keyframes scroll {
   to {
-    transform: translateY(calc(50%));
+    transform: translateX(calc(-50%));
   }
 }
 
 .tag-list {
   position: relative;
-  left: -30px;
+  bottom: 35px;
+  color: white;
 }
 
 .tag-list li {
   padding: 2rem;
   margin: 1rem;
-  rotate: 90deg;
+  rotate: 0deg;
 }
 
 .scroller_carousel:hover .scroller__inner_carousel {
   animation-play-state: paused;
 }
 
-
-/* Existing styles */
-
-/* Media query for phone sizes */
-@media (max-width: 600px) {
-
-  .tag-list{
-    left: -25px;
-  }
-  .scroller__inner_carousel-background{
-    padding: 2px;
-    left: -10px;
-  }
-
+@media screen and (max-width: 768px) {
   .scroller_carousel {
-    max-width: 80px;
+    width: 100%;
   }
-
-  .scroller__inner_carousel-background img {
-    width: 18px;
-  }
-
-  .scroller__inner_carousel-background img:hover {
-    width: 30px ;
-  }
-
-  .tag-list li {
-    font-size: 12px;
-    padding: 1rem; 
-    margin: 0.5rem; 
-  }
+  
 }
