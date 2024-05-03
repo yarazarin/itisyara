@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/itisyara/static/css/main.ff194ab0.css",
-    "main.js": "/itisyara/static/js/main.098435a6.js",
+    "main.css": "/itisyara/static/css/main.c0696b09.css",
+    "main.js": "/itisyara/static/js/main.3ff84f31.js",
     "static/js/885.1f14c024.chunk.js": "/itisyara/static/js/885.1f14c024.chunk.js",
     "static/media/api.png": "/itisyara/static/media/api.7eabf7dedba656939a0b.png",
     "static/media/YARA_Resume.pdf": "/itisyara/static/media/YARA_Resume.c35512cf517c291eba24.pdf",
@@ -31,12 +31,12 @@
     "static/media/js.png": "/itisyara/static/media/js.85764d1cce8e0cbb2db6.png",
     "static/media/git.png": "/itisyara/static/media/git.97bf9b06b9d467f97d5c.png",
     "index.html": "/itisyara/index.html",
-    "main.ff194ab0.css.map": "/itisyara/static/css/main.ff194ab0.css.map",
-    "main.098435a6.js.map": "/itisyara/static/js/main.098435a6.js.map",
+    "main.c0696b09.css.map": "/itisyara/static/css/main.c0696b09.css.map",
+    "main.3ff84f31.js.map": "/itisyara/static/js/main.3ff84f31.js.map",
     "885.1f14c024.chunk.js.map": "/itisyara/static/js/885.1f14c024.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff194ab0.css",
-    "static/js/main.098435a6.js"
+    "static/css/main.c0696b09.css",
+    "static/js/main.3ff84f31.js"
   ]
 }
