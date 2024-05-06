@@ -25,19 +25,17 @@ const ModalComponent = ({
         centered
         dialogClassName="custom-modal-size"
       >
-        <Modal.Header closeButton>
-          <img src={image} alt={title} className="modal-image" />
+        <Modal.Header>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Button
-          variant="primary"
-          href={url}
-          target="_blank"
-          className="go_to-website"
+        <Modal.Body
+          style={{
+            backgroundImage: `url(${image})`,
+            backgroundSize: '50%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
         >
-          See the project
-        </Button>
-        <Modal.Body>
           <div className="custom-modal-content">
             {paragraphs.map((paragraph, index) => (
               <div
@@ -47,6 +45,14 @@ const ModalComponent = ({
             ))}
           </div>
         </Modal.Body>
+        <Button
+          variant="primary"
+          href={url}
+          target="_blank"
+          className="go_to-website"
+        >
+          See the project
+        </Button>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -56,7 +62,6 @@ const ModalComponent = ({
     </>
   );
 };
-
 const ThirdPage = () => {
   const [showModal, setShowModal] = useState(false);
   const projects = [
@@ -150,7 +155,7 @@ const ThirdPage = () => {
         </h2>
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <div className="border p-6">
+            <div className="p-6">
               {projects.map((project, index) => (
                 <Button
                   key={index}
