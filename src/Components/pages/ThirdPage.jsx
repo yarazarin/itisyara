@@ -148,7 +148,7 @@ const ThirdPage = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container third-container">
         <h2 className="text-center mb-4">
           Some Of My Projects Are Here{" "}
           <i class="fa-solid fa-turn-down" style={{ color: "green" }}></i>

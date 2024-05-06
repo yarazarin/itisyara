@@ -1,3 +1,4 @@
+
 .custom-modal-content {
   background-color: #04000fe7;
   color: #ffffff;
@@ -99,5 +100,15 @@
   }
   .custom-modal-content h4{
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-device-aspect-ratio: 2/3) and (hover: none) {
+  /* iOS-specific CSS here; iOS teaches us patience :| */
+  .third-container {
+    position: relative;
+    top: 100px;
+    height: 30vh;
+    scale: 0.9;
   }
 }

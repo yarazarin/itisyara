@@ -106,3 +106,10 @@ titr {
     font-size: 0.6rem;
   }
 }
+
+@media screen and (max-device-aspect-ratio: 2/3) and (hover: none) {
+  /* iOS-specific CSS here; iOS teaches us patience :| */
+  .second_page {
+    height: 30vh;
+  }
+}
