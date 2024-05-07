@@ -23,7 +23,6 @@
 
 .scroller__inner_carousel-background {
   border-radius: 10px;
-  background-color: #f1f1f1;
   padding: 5px;
   align-items: center;
   justify-content: center;
@@ -88,9 +87,9 @@
 }
 
 .tag-list li {
-  padding: 2rem;
   margin: 1rem;
   rotate: 0deg;
+  font-size: .7rem;
 }
 
 .scroller_carousel:hover .scroller__inner_carousel {

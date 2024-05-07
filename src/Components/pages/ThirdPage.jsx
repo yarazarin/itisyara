@@ -8,6 +8,9 @@ import myFlix from "../../img/myFlix.png";
 import myAng from "../../img/myAng.png";
 import todo from "../../img/todo.png";
 import Arrow from "../Arrow";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const ModalComponent = ({
   title,
@@ -64,6 +67,8 @@ const ModalComponent = ({
 };
 const ThirdPage = () => {
   const [showModal, setShowModal] = useState(false);
+
+
   const projects = [
     {
       title: "myFlix React",
@@ -138,12 +143,22 @@ const ThirdPage = () => {
       ],
     },
   ];
+
+
   const [selectedProject, setSelectedProject] = useState({});
 
   const handleClose = () => setShowModal(false);
   const handleShow = (project) => {
     setSelectedProject(project);
     setShowModal(true);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
 
   return (
@@ -153,36 +168,33 @@ const ThirdPage = () => {
           Some Of My Projects Are Here{" "}
           <i class="fa-solid fa-turn-down" style={{ color: "green" }}></i>
         </h2>
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <div className="p-6">
-              {projects.map((project, index) => (
-                <Button
-                  key={index}
-                  variant="primary"
-                  className="mb-2 custom-button"
-                  onClick={() => handleShow(project)}
+        <Slider {...settings} className="my-slider">
+          {projects.map((project, index) => (
+            <div key={index}>
+              <Button
+                variant=""
+                className="mb-2 custom-button"
+                onClick={() => handleShow(project)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      width="100"
-                      height="100"
-                    />
-                    <span>{project.title}</span>
-                  </div>
-                </Button>
-              ))}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    width="100"
+                    height="100"
+                  />
+                  <span>{project.title}</span>
+                </div>
+              </Button>
             </div>
-          </div>
-        </div>
+          ))}
+        </Slider>
         <ModalComponent
           title={selectedProject.title}
           paragraphs={selectedProject.paragraphs}

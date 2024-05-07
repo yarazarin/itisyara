@@ -22,6 +22,7 @@ import sc from "../img/logo/sc.png";
 import hk from "../img/logo/hk.png";
 import tr from "../img/logo/tr.png";
 import pm from "../img/logo/pm.png";
+import dk from "../img/logo/dk.png";
 
 const HorizontalMenuCarousel = () => {
   useEffect(() => {
@@ -60,6 +61,7 @@ const HorizontalMenuCarousel = () => {
           <li>Angular</li>
           <li>JQuery</li>
           <li>Bootstrap</li>
+          <li>Docker</li>
           <li>AWS</li>
           <li>EC2</li>
           <li>Lambda</li>
@@ -91,6 +93,7 @@ const HorizontalMenuCarousel = () => {
       >
         <div className="scroller__inner_carousel scroller__inner_carousel-background">
           <img src={aw} alt="AWS" />
+          <img src={dk} alt="Docker" />
           <img src={git} alt="Git" />
           <img src={gh} alt="GitHub" />
           <img src={ht} alt="HTML" />
@@ -108,10 +111,10 @@ const HorizontalMenuCarousel = () => {
           <img src={mdb} alt="MongoDB" />
           <img src={fb} alt="Firebase" />
           <img src={jq} alt="JQuery" />
+          <img src={tr} alt="Trello" />
           <img src={gs} alt="Google Workspace" />
           <img src={ind} alt="Indesign" />
           <img src={ps} alt="Photoshop" />
-          <img src={tr} alt="Trello" />
         </div>
       </div>
     </>
