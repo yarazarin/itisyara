@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/itisyara/static/css/main.d7c2207c.css",
-    "main.js": "/itisyara/static/js/main.79b00ead.js",
-    "static/js/885.66128210.chunk.js": "/itisyara/static/js/885.66128210.chunk.js",
+    "main.css": "/itisyara/static/css/main.dd05fce2.css",
+    "main.js": "/itisyara/static/js/main.c17b247c.js",
+    "static/js/885.1f14c024.chunk.js": "/itisyara/static/js/885.1f14c024.chunk.js",
+    "static/media/moon.png": "/itisyara/static/media/moon.69ccff3e67300f15c4e6.png",
     "static/media/api.png": "/itisyara/static/media/api.7eabf7dedba656939a0b.png",
     "static/media/tr.png": "/itisyara/static/media/tr.f83a2376dc996d9fc68e.png",
     "static/media/aw.png": "/itisyara/static/media/aw.861a7cf44b748af4863d.png",
@@ -31,17 +32,13 @@
     "static/media/nj.png": "/itisyara/static/media/nj.07d152a8a036951b8d14.png",
     "static/media/js.png": "/itisyara/static/media/js.85764d1cce8e0cbb2db6.png",
     "static/media/git.png": "/itisyara/static/media/git.034cd0cddfbf9f1b3ea7.png",
-    "static/media/slick.svg": "/itisyara/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/itisyara/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/itisyara/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/itisyara/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/itisyara/index.html",
-    "main.d7c2207c.css.map": "/itisyara/static/css/main.d7c2207c.css.map",
-    "main.79b00ead.js.map": "/itisyara/static/js/main.79b00ead.js.map",
-    "885.66128210.chunk.js.map": "/itisyara/static/js/885.66128210.chunk.js.map"
+    "main.dd05fce2.css.map": "/itisyara/static/css/main.dd05fce2.css.map",
+    "main.c17b247c.js.map": "/itisyara/static/js/main.c17b247c.js.map",
+    "885.1f14c024.chunk.js.map": "/itisyara/static/js/885.1f14c024.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7c2207c.css",
-    "static/js/main.79b00ead.js"
+    "static/css/main.dd05fce2.css",
+    "static/js/main.c17b247c.js"
   ]
 }
