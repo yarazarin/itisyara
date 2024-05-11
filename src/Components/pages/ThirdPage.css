@@ -1,130 +1,142 @@
-
-.custom-modal-content {
-  background-color: #04000fe7;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 15px;
-  border-radius: 10px;
+/* Some styles are applied directly in the component's JSX code due to their dynamic nature. */
+.TirdPage_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: -5rem;
+  z-index: 999999;
 }
 
-.custom-modal-content h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 10px;
-  color: #aaaaaa;
-  font-family: "kalam", sans-serif;
-}
-
-.go_to-website {
-  animation: hurtbit 2s linear infinite;
-}
-
-@keyframes hurtbit {
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.97);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.custom-modal-size {
-  max-width: 80%;
-  max-width: 600px;
-
-}
-
-.custom-modal-content p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #333;
-  font-family: "kalam", sans-serif;
-}
-
-.modal-image {
-  width: 15%;
-  height: auto;
-}
-
-.custom-button {
-  color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 220px;
-  height: 170px;
-  background-color: #0d00ff0e;
-}
-
-.modal-content h1 {
-  text-align: center;
-}
-.modal-content p {
-  text-align: center;
-}
-.modal-content button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.text-center {
+.rounded_image {
   display: block;
   position: relative;
-  top: 160px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
-.my-slider {
-  width: 40%; 
-  height:100%; 
-  margin: 0 auto;
-  margin-top: 10rem;
-  scale: 2;
+.rounded_image:hover {
+  transform: scale(1.5) rotate(360deg);
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  transition: 0.5s;
+}
+
+.line_circle {
+  position: fixed;
+  left: -290px;
+  top: -20px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 3px solid #ffffff59;
+  padding: 50px;
+}
+.moon {
+  animation: rotate 60s linear infinite;
+  z-index: 9;
+}
+
+.infoBox {
+  position: absolute;
+  max-width: 800px;
+  padding: 20px;
+  background-image: linear-gradient(90deg, #00000000 0%, #ffffff28 100%);
+  border-radius: 10px;
+  text-align: left;
+  left: 25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 3rem;
+}
+
+.infoBox h4 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.rounded_link-Button {
+  position: fixed;
+  padding-left: 190px;
+  transform-origin: -13%;
+  border: none;
+  text-decoration: none;
+  left: 5px;
+  top: 13rem;
+  z-index: 9;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.infoBox button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ffffff28, #000, #ffffff28);
+  background-size: 200% auto;
+  background-position: right center;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 1s ease;
+}
+
+.infoBox button:hover {
+  background-position: left center;
+  box-shadow: 0 0 2px 0 rgb(255, 255, 255);
+}
+
+.info_title {
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
 }
 
 @media (max-width: 768px) {
-  .custom-modal-size {
-    width: 90%;
+  
+  .circle_menue-container {
+    position: fixed;
+    scale: 0.6;
+    top: 8%;
+    left: 85%;
+    z-index: 999999;
+    transform: rotate(90deg);
   }
-  .my-slider {
-    width: 60%; 
-    height:80%; 
-    margin: 0 auto;
-    margin-top: 9rem;
-    scale: 1.3;
+
+  .infoBox {
+    transform: rotate(270deg);
+    width: 550px;
+    height: 450px;
+    font-size: 1rem;
+    padding: 10px;
+    left: 16rem;
+    top: 2rem;
+    z-index: 999999;
   }
-  .arrow3rd {
-    position: absolute;
-    top:7rem;
-    left: 91%;
+  .infoBox h4 {
+    font-size: 1.5rem;
+  }
+  .rounded_image {
+    transform: rotate(270deg);
   }
 }
-
-@media (max-width: 576px) {
-  .custom-modal-size {
-    width: 100%;
-  }
-  .custom-modal-content h4{
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-device-aspect-ratio: 2/3) and (hover: none) {
-  /* iOS-specific CSS here; iOS teaches us patience :| */
-  .third-container {
-    position: relative;
-    top: 100px;
-    height: 30vh;
-    scale: 0.9;
-  }
-}
-
