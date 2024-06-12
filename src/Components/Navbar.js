@@ -52,7 +52,7 @@ const Navbar = ({ scrollTo, currentPage }) => {
           className={currentPage === 4 ? "active" : ""}
           onClick={() => {
             window.location.href =
-              "https://yarazarin.github.io/mern-blog-client/myblog";
+              "https://yarazarin.github.io/mern-blog-client/";
             play();
           }}
         >
