@@ -51,7 +51,7 @@ const Navbar = ({ scrollTo, currentPage }) => {
         <li
           className={currentPage === 4 ? "active" : ""}
           onClick={() => {
-            window.location.href = "https://yarablog.netlify.app";
+            window.location.href = "https://yarablog.netlify.app/myblog";
             play();
           }}
         >
