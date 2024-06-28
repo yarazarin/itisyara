@@ -9,7 +9,7 @@ import FirstPage from "./Components/pages/FirstPage";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [setIsScrolling] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -115,7 +115,7 @@ const App = () => {
       dotdot,
       setCurrentPage,
       setIsScrolling
-    ); // Pass setIsScrolling to Slider
+    );
   }, [setIsScrolling]);
 
   const scrollTo = (id, pageIndex) => {
@@ -128,6 +128,7 @@ const App = () => {
         setCurrentPage={setCurrentPage}
         scrollTo={scrollTo}
         currentPage={currentPage}
+        isScrolling={isScrolling}
       />
       <div
         className="pages"
@@ -146,6 +147,7 @@ const App = () => {
           <ContactForm />
         </section>
       </div>
+      {isScrolling && <div className="scrolling-indicator"></div>}
       <ul className="dotdot"></ul>
       <Footer />
     </>
