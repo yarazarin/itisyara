@@ -188,7 +188,7 @@ const ThirdPage = () => {
     transform: `rotate(${deg}deg)`,
   });
 
-  const linkOver = (e, radius, link) => {
+  const linkOver = (e, link) => {
     setHoveredLink(link);
     const thisLink = e.target;
     const thisHover = thisLink.nextSibling;
@@ -198,7 +198,7 @@ const ThirdPage = () => {
     }
   };
 
-  const linkOut = (e, radius) => {
+  const linkOut = (e, ) => {
     const thisLink = e.target;
     const thisHover = thisLink.nextSibling;
     if (thisHover && !infoBoxHovered) {

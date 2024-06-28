@@ -9,7 +9,7 @@ import FirstPage from "./Components/pages/FirstPage";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [setIsScrolling] = useState(false);
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const App = () => {
       setCurrentPage,
       setIsScrolling
     ); // Pass setIsScrolling to Slider
-  }, []);
+  });
 
   const scrollTo = (id, pageIndex) => {
     sliderRef.current.gotoNum(pageIndex);
