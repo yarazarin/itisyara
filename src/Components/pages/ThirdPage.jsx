@@ -30,7 +30,6 @@ const ThirdPage = () => {
     {
       label: "myFlix React",
       bg: "#c0392b",
-      description: "myFlix React",
       image: myFlix,
       url: "https://yaramyflix.netlify.app",
       description: [
@@ -55,7 +54,6 @@ const ThirdPage = () => {
     {
       label: "Meet App",
       bg: "#16a085",
-      description: "Meet App",
       image: meet,
       url: "https://yarazarin.github.io/meet",
       description: [
@@ -81,7 +79,6 @@ const ThirdPage = () => {
     {
       label: "myFlix Angular",
       bg: "#27ae60",
-      description: "myFlix Angular",
       image: myAng,
       url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
       description: [
@@ -107,7 +104,6 @@ const ThirdPage = () => {
     {
       label: "ToDo App",
       bg: "#8e44ad",
-      description: "ToDo App",
       image: todo,
       url: "https://yarazarin.github.io/to-do-list-app",
       description: [
@@ -134,7 +130,6 @@ const ThirdPage = () => {
     {
       label: "R.Native Chat",
       bg: "#f39c12",
-      description: "React native Chat App",
       image: chat,
       url: "https://github.com/yarazarin/CHAT",
       description: [
@@ -160,7 +155,6 @@ const ThirdPage = () => {
     {
       label: "API Project",
       bg: "#2980b9",
-      description: "API Pokemon Project",
       image: api,
       url: "https://yarazarin.github.io/simple-js-app",
       description: [
