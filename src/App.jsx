@@ -116,7 +116,7 @@ const App = () => {
       setCurrentPage,
       setIsScrolling
     ); // Pass setIsScrolling to Slider
-  }, []);
+  }, [setIsScrolling]);
 
   const scrollTo = (id, pageIndex) => {
     sliderRef.current.gotoNum(pageIndex);
