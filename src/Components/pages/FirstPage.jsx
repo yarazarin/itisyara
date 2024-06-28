@@ -5,9 +5,9 @@ import paper from "../../sound/paper.mp3";
 import Arrow from "../Arrow";
 import MatrixRain from "../MatrixRain";
 
+const textLines = ["Hello,", "I Am Yara", "A Full Stack Developer"];
 const FirstPage = () => {
   const [typedText, setTypedText] = useState([]);
-  const textLines = ["Hello,", "I Am Yara", "A Full Stack Developer"];
 
   useEffect(() => {
     const sectionsLeaf = [...document.querySelectorAll(".leaf")];
@@ -15,7 +15,7 @@ const FirstPage = () => {
       rootMargin: "0px",
       threshold: 0.25,
     };
-  
+
     const callbackLeaf = (entries) => {
       entries.forEach((entry) => {
         const { target } = entry;
@@ -29,7 +29,7 @@ const FirstPage = () => {
         }
       });
     };
-  
+
     const observerLeaf = new IntersectionObserver(callbackLeaf, optionsLeaf);
     sectionsLeaf.forEach((section) => {
       observerLeaf.observe(section);
@@ -44,7 +44,7 @@ const FirstPage = () => {
           setTypedText((prevTypedText) => [
             ...prevTypedText.slice(0, lineIndex),
             line.slice(0, charIndex + 1),
-            ...prevTypedText.slice(lineIndex + 1)
+            ...prevTypedText.slice(lineIndex + 1),
           ]);
           if (charIndex < line.length - 1) {
             typeText(lineIndex, charIndex + 1);
@@ -60,7 +60,7 @@ const FirstPage = () => {
     return () => {
       observerLeaf.disconnect(); // cleanup on unmount
     };
-  }, [textLines]);
+  }, []);
 
   const handleButtonClick = () => {
     const audio = new Audio(paper);
@@ -91,7 +91,9 @@ const FirstPage = () => {
           download
           onClick={handleButtonClick}
         >
-          Download My Resume<br/><i class="fa-solid fa-download"></i>
+          Download My Resume
+          <br />
+          <i class="fa-solid fa-download"></i>
         </a>
         <span className="resume_button_base"></span>
       </div>
