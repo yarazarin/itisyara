@@ -60,7 +60,7 @@ const FirstPage = () => {
     return () => {
       observerLeaf.disconnect(); // cleanup on unmount
     };
-  }, []);
+  }, [textLines]);
 
   const handleButtonClick = () => {
     const audio = new Audio(paper);
