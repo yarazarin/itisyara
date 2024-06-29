@@ -122,6 +122,7 @@ const App = () => {
     sliderRef.current.gotoNum(pageIndex);
   };
 
+  
   return (
     <>
       <Navbar
