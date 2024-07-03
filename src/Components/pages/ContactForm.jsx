@@ -8,7 +8,6 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [emailSent, setEmailSent] = useState(false);
-
   const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleFirstNameChange = (e) => {
@@ -82,6 +81,7 @@ const ContactForm = () => {
     handleReset();
     setCaptchaValue(null);
   };
+  
 
   return (
     <div className="contact-container">
