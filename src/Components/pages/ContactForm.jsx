@@ -171,7 +171,7 @@ const ContactForm = () => {
         <div className="card-body">
           <h2 className="card-title text-center mb-4 Get-in_Touch">Get in Touch</h2>
           <div className="d-flex justify-content-center mb-4">
-<i className="fa-solid fa-arrow-turn-down fa-2x"></i>
+{/* <i className="fa-solid fa-arrow-turn-down fa-2x"></i> */}
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
@@ -201,7 +201,7 @@ const ContactForm = () => {
               </a>
             </li>
             <li className="list-group-item">
-              <code className="code-email_address">uraeel@gmail.com</code>
+              <a href="mailto:itisyara@gmail.com" className="email_address">uraeel@gmail.com</a>
             </li>
           </ul>
         </div>

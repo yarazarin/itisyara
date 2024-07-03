@@ -97,28 +97,43 @@
   top: 4rem;
   color: #26ff00;
   font-size: 2rem;
+  background-color: transparent;
 }
+  background-color: transparent;
+
 .contact-list {
   list-style-type: none;
   padding: 0;
+
 }
 
 .contact-list_li {
   margin: 10px 0;
+  background-color: transparent;
+  cursor: pointer;
+
+
 }
 
-.code-email_address {
+.email_address {
   display: block;
   text-align: center;
   margin-top: 10px;
   font-size: 1.2em;
-  color: #333;
+  color: #26ff00;
+  cursor: pointer;
+
 }
 
 .card {
+  background-color: #0055fe1d;
   max-width: 400px;
   margin: auto;
   border-radius: 10px;
   font-size: 1.2em;
-  font-weight: bold;
+}
+
+.list-group-item{
+  background-color: transparent;
+  top:-40px;
 }
