@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/itisyara/static/css/main.dd05fce2.css",
-    "main.js": "/itisyara/static/js/main.c86fb88d.js",
+    "main.css": "/itisyara/static/css/main.0e2c5e8f.css",
+    "main.js": "/itisyara/static/js/main.ad987582.js",
     "static/js/885.1f14c024.chunk.js": "/itisyara/static/js/885.1f14c024.chunk.js",
     "static/media/moon.png": "/itisyara/static/media/moon.69ccff3e67300f15c4e6.png",
     "static/media/api.png": "/itisyara/static/media/api.7eabf7dedba656939a0b.png",
@@ -33,12 +33,12 @@
     "static/media/js.png": "/itisyara/static/media/js.85764d1cce8e0cbb2db6.png",
     "static/media/git.png": "/itisyara/static/media/git.034cd0cddfbf9f1b3ea7.png",
     "index.html": "/itisyara/index.html",
-    "main.dd05fce2.css.map": "/itisyara/static/css/main.dd05fce2.css.map",
-    "main.c86fb88d.js.map": "/itisyara/static/js/main.c86fb88d.js.map",
+    "main.0e2c5e8f.css.map": "/itisyara/static/css/main.0e2c5e8f.css.map",
+    "main.ad987582.js.map": "/itisyara/static/js/main.ad987582.js.map",
     "885.1f14c024.chunk.js.map": "/itisyara/static/js/885.1f14c024.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd05fce2.css",
-    "static/js/main.c86fb88d.js"
+    "static/css/main.0e2c5e8f.css",
+    "static/js/main.ad987582.js"
   ]
 }
