@@ -1,5 +1,4 @@
-/* Contact Container */
-.contact-container {
+/* .contact-container {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -10,7 +9,6 @@
   color: #FFFAF0;
 }
 
-/* Form Group */
 .form-group {
   margin-bottom: 1rem;
   display: flex;
@@ -28,7 +26,6 @@
   color: #FFFAF0;
 }
 
-/* Form Control */
 .form-control {
   position: relative;
   display: block;
@@ -44,13 +41,11 @@
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* User Message */
 .user-message {
   position: relative;
   max-height: 120px;
 }
 
-/* Button Submit */
 .btn-submit {
   color: #000000;
   background-color: #FFFAF0;
@@ -71,7 +66,6 @@
   border-color: #FFFAF0;
 }
 
-/* Hire Me */
 .hire-me {
   position: relative;
   display: block;
@@ -84,7 +78,6 @@
   margin-bottom: 1rem;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .form-control {
     font-size: .8rem; 
@@ -93,4 +86,39 @@
   .btn-submit {
     font-size: .8rem; 
   }
+} */
+
+
+
+.Get-in_Touch{
+  display: block;
+  position: relative;
+  text-align: center;
+  top: 4rem;
+  color: #26ff00;
+  font-size: 2rem;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list_li {
+  margin: 10px 0;
+}
+
+.code-email_address {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
