@@ -242,6 +242,7 @@ const ThirdPage = () => {
               </div>
             );
           })}
+          
           {hoveredLink && (
             <div
               className="infoBox"
