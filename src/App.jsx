@@ -143,6 +143,7 @@ const App = () => {
           <h2 className="title title_d">
             <ThirdPage />
           </h2>
+          
         </section>
         <section className="fourth page" id="sec4">
           <ContactForm />
