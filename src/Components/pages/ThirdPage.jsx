@@ -6,7 +6,7 @@ import meet from "../../img/meet.png";
 import myFlix from "../../img/myFlix.png";
 import myAng from "../../img/myAng.png";
 import todo from "../../img/todo.png";
-import moon from "../../img/moon.png";
+import moon from "../../img/moon.gif";
 
 const ThirdPage = () => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
