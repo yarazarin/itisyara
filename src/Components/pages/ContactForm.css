@@ -1,4 +1,4 @@
-.contact-container {
+/* .contact-container {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -86,10 +86,10 @@
   .btn-submit {
     font-size: .8rem; 
   }
-}
+} */
 
 
-/* 
+
 .Get-in_Touch{
   display: block;
   position: relative;
@@ -136,4 +136,4 @@
 .list-group-item{
   background-color: transparent;
   top:-40px;
-} */
+}
