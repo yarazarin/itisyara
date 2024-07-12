@@ -92,7 +92,7 @@ const ContactForm = () => {
       )}
       {emailSent ? (
         <>
-          <p>Email sent successfully!</p>
+          <p>Email Sent Successfully! Feel free to add more details to your message if needed.👍</p>
           <button
             type="reset"
             className="btn-back"
@@ -105,7 +105,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">
-              Name | Org | Co | title... <span style={{ color: "red" }}>*</span>
+              Name | Org | Co | Title... <span style={{ color: "red" }}>*</span>
             </label>
             <input
               type="text"
@@ -160,54 +160,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-// import React from "react";
-// import "./ContactForm.css";
-
-// const ContactForm = () => {
-//   return (
-//     <div className="container my-5">
-//       <div className="card shadow">
-//         <div className="card-body">
-//           <h2 className="card-title text-center mb-4 Get-in_Touch">Get in Touch</h2>
-//           <div className="d-flex justify-content-center mb-4">
-// {/* <i className="fa-solid fa-arrow-turn-down fa-2x"></i> */}
-//           </div>
-//           <ul className="list-group list-group-flush">
-//             <li className="list-group-item">
-//               <a
-//                 href="https://github.com/yarazarin"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="text-decoration-none"
-//               >
-//                 <i className="fab fa-github fa-lg me-2"></i> GitHub
-//               </a>
-//             </li>
-//             <li className="list-group-item">
-//               <a
-//                 href="https://www.linkedin.com/in/yarazarin"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//                 className="text-decoration-none"
-//               >
-//                 <i className="fab fa-linkedin fa-lg me-2"></i> LinkedIn
-//                 <span id="linkedin-link"></span>
-//               </a>
-//             </li>
-//             <li className="list-group-item">
-//               <a href="mailto:itisyara@gmail.com" className="text-decoration-none">
-//                 <i className="fas fa-envelope fa-lg me-2"></i> Email
-//               </a>
-//             </li>
-//             <li className="list-group-item">
-//               <a href="mailto:itisyara@gmail.com" className="email_address">uraeel@gmail.com</a>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactForm;
