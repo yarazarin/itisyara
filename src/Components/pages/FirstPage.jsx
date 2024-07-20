@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./FirstPage.css";
-import Yara_Resume from "../../doc/YARA_Resume.pdf";
+import Yara_Zarin_Resume_7_24 from "../../doc/Yara_Zarin_Resume_7_24.pdf";
 import paper from "../../sound/paper.mp3";
 import Arrow from "../Arrow";
 import MatrixRain from "../MatrixRain";
@@ -87,7 +87,7 @@ const FirstPage = () => {
         <br />
         <a
           className="resume_button"
-          href={Yara_Resume}
+          href={Yara_Zarin_Resume_7_24}
           download
           onClick={handleButtonClick}
         >
