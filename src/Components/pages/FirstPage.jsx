@@ -35,7 +35,7 @@ const FirstPage = () => {
       observerLeaf.observe(section);
     });
 
-    const typingDelay = 150; // typing speed
+    const typingDelay = 120; // typing speed
 
     const typeText = (lineIndex, charIndex) => {
       if (lineIndex < textLines.length) {
