@@ -48,16 +48,20 @@ const Navbar = ({ scrollTo, currentPage }) => {
           <i className="fas fa-envelope"></i>
           <span className="nav-label">Contact</span>
         </li>
-        <li
-          className={currentPage === 4 ? "active" : ""}
-          onClick={() => {
-            window.location.href = "https://yarablog.netlify.app";
-            play();
-          }}
-        >
-          <i className="fas fa-blog"></i>
-          <span className="nav-label">Blog</span>
-        </li>
+
+        <div id="blog-button">
+          <li
+            className=""
+            onClick={() => {
+              window.location.href = "https://yarablog.netlify.app";
+              play();
+            }}
+          >
+            <i className="fas fa-blog"></i>
+            <span className="nav-label">Blog</span>
+          </li>
+        </div>
+
       </ul>
     </nav>
   );

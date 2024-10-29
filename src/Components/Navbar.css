@@ -46,7 +46,7 @@ nav ul li a {
 
 nav ul li:hover {
   color: #bc0000;
-  background-color: #f2ff00;
+  background-color: #15ff00;
 }
 
 .active {
@@ -54,6 +54,53 @@ nav ul li:hover {
   zoom: 1.06;
   transform: matrix(1.1, 0, 0, 1.1, 0, 0);
 }
+
+
+#blog-button {
+  transform-origin: center bottom;
+  border-top-left-radius: 50% 90%;
+  border-bottom-right-radius: 50% 100%;
+  background-color: rgba(0, 26, 255, 0.134);
+  animation: seesaw 4s infinite linear, shadow-move 4s infinite linear;
+}
+
+@keyframes seesaw {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shadow-move {
+  0% {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+  20% {
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+  80% {
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+
 
 @media (max-width: 768px) {
   nav ul li {
