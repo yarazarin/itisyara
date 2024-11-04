@@ -1,5 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Footer.css";
+
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 const Footer = () => {
   const [time, setTime] = useState(new Date());
@@ -12,29 +27,16 @@ const Footer = () => {
       clearInterval(interval);
     };
   }, []);
-  const formatTime = (time) => {
+
+  const formatTime = useCallback((time) => {
     const year = time.getFullYear();
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = months[time.getMonth()];
+    const month = MONTHS[time.getMonth()];
     const day = time.getDate().toString().padStart(2, "0");
     const hours = time.getHours();
     const minutes = time.getMinutes().toString().padStart(2, "0");
     const seconds = time.getSeconds().toString().padStart(2, "0");
     return `${year} ~ ${month} ${day}   ${hours}:${minutes}:${seconds}`;
-  };
+  }, []);
 
   return (
     <div className="footer">
@@ -51,6 +53,7 @@ const Footer = () => {
           href="https://github.com/yarazarin"
           target="_blank"
           rel="noopener noreferrer"
+          title="Visit Yara's GitHub profile"
         >
           <i className="fab fa-github-square"></i>
         </a>
@@ -58,6 +61,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/yarazarin"
           target="_blank"
           rel="noopener noreferrer"
+          title="Visit Yara's LinkedIn profile"
         >
           <i className="fab fa-linkedin"></i>
         </a>
