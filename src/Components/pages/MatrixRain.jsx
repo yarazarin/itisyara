@@ -2,59 +2,82 @@ import React, { useEffect } from "react";
 
 const MatrixRain = () => {
   useEffect(() => {
-    // get the canvas element and its context
     const canvas = document.getElementById("c");
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: false }); // Optimize for non-transparent canvas
 
-    // making the canvas full screen
-    canvas.height = window.innerHeight * 5;
+    // Adjust canvas size to actual viewport
+    canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
-    // characters to display
-    const matrix = "0101ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ";
-    const characters = matrix.split("");
-
+    // Pre-calculate and cache values
+    const characters = "0101ｦｱｳｴｵｶｷｹｺｻｼｽｾｿﾀﾂﾃﾅﾆﾇﾈﾊﾋﾎﾏﾐﾑﾒﾓﾔﾕﾗﾘﾜ".split("");
+    const charLength = characters.length;
     const font_size = 15;
-    const columns = canvas.width / font_size / 7;
-    const drops = [];
+    const columns = Math.floor(canvas.width / font_size / 7);
+    const drops = new Float32Array(columns); // Use typed array for better performance
 
+    // Initialize drops
     for (let x = 0; x < columns; x++) {
-      drops[x] = Math.random() * canvas.height;
+      drops[x] = Math.random() * canvas.height / font_size;
     }
 
-    // Function to reset the drops array
-    function resetDrops() {
-      for (let x = 0; x < columns; x++) {
-        drops[x] = Math.random() * canvas.height;
-      }
-    }
-
-    // Reset the drops array every 25 seconds
-    setInterval(resetDrops, 10000);
+    // Pre-set canvas font to avoid setting it in animation loop
+    ctx.font = font_size + "px arial";
+    
+    // Create off-screen canvas for better performance
+    const offCanvas = new OffscreenCanvas(canvas.width, canvas.height);
+    const offCtx = offCanvas.getContext("2d", { alpha: false });
+    offCtx.font = ctx.font;
 
     function draw() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Clear canvas with opacity
+      offCtx.fillStyle = "rgba(0, 0, 0, 0.04)";
+      offCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#0F83"; // green matrix text color is: #0F0
-      ctx.font = font_size + "px arial";
+      // Set text color once
+      offCtx.fillStyle = "#0F83";
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = characters[Math.floor(Math.random() * characters.length)];
-        ctx.fillText(text, i * font_size, drops[i] * font_size);
+      // Draw characters
+      for (let i = 0; i < columns; i++) {
+        const text = characters[Math.floor(Math.random() * charLength)];
+        const x = i * font_size;
+        const y = drops[i] * font_size;
+        
+        offCtx.fillText(text, x, y);
 
-        if (drops[i] * font_size > canvas.height && Math.random() > 0.975) {
+        if (y > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
+        } else {
+          drops[i]++;
         }
+      }
 
-        drops[i]++;
+      // Copy off-screen canvas to main canvas
+      ctx.drawImage(offCanvas, 0, 0);
+    }
+
+    // Use requestAnimationFrame instead of setInterval for smoother animation
+    let animationId;
+    let lastDraw = 0;
+    const fps = 30; // Limit FPS to reduce resource usage
+    const interval = 1000 / fps;
+
+    function animate(timestamp) {
+      animationId = requestAnimationFrame(animate);
+      
+      const delta = timestamp - lastDraw;
+      
+      if (delta > interval) {
+        lastDraw = timestamp - (delta % interval);
+        draw();
       }
     }
 
-    const intervalId = setInterval(draw, 150);
+    animationId = requestAnimationFrame(animate);
 
+    // Clean up function
     return () => {
-      clearInterval(intervalId); // Clear the interval on unmount
+      cancelAnimationFrame(animationId);
     };
   }, []);
 
@@ -63,25 +86,13 @@ const MatrixRain = () => {
       id="c"
       style={{
         display: "block",
-        backgroundColor: "transparent",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 0,
       }}
     />
   );
 };
 
 export default MatrixRain;
-
-// Add the CSS styles here as well
-const styles = `
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-`;
-
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
