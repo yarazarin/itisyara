@@ -14,12 +14,25 @@ const Footer = () => {
   }, []);
   const formatTime = (time) => {
     const year = time.getFullYear();
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     const month = months[time.getMonth()];
-    const day = time.getDate().toString().padStart(2, '0');
+    const day = time.getDate().toString().padStart(2, "0");
     const hours = time.getHours();
-    const minutes = time.getMinutes().toString().padStart(2, '0');
-    const seconds = time.getSeconds().toString().padStart(2, '0');
+    const minutes = time.getMinutes().toString().padStart(2, "0");
+    const seconds = time.getSeconds().toString().padStart(2, "0");
     return `${year} ~ ${month} ${day}   ${hours}:${minutes}:${seconds}`;
   };
 
@@ -27,9 +40,10 @@ const Footer = () => {
     <div className="footer">
       <div className="ico">
         <a
-          href="mailto:%20uraeel@gmail.com/"
+          href="mailto:uraeel@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          title="Send an email to Uraeel"
         >
           <i className="fa-solid fa-square-envelope"></i>
         </a>
@@ -47,10 +61,9 @@ const Footer = () => {
         >
           <i className="fab fa-linkedin"></i>
         </a>
-
       </div>
       <div className="Rights">
-      <pre>Yara Zarin     {formatTime(time)}</pre>
+        <pre>Yara Zarin {formatTime(time)}</pre>
       </div>
     </div>
   );
