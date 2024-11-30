@@ -6,49 +6,69 @@ import meet from "../../img/meet.png";
 import myFlix from "../../img/myFlix.png";
 import myAng from "../../img/myAng.png";
 import todo from "../../img/todo.png";
-import moon from "../../img/moon.gif";
 
-const ThirdPage = () => {
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [hoveredLink, setHoveredLink] = useState(null);
-  const [infoBoxHovered, setInfoBoxHovered] = useState(false);
+const TirdPage = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [flippedCards, setFlippedCards] = useState(Array(6).fill(false)); // 6 cards
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    let interval;
+    if (isAutoScrolling) {
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % 6); // Wrap 6 cards
+      }, 4000);
+    }
+    return () => clearInterval(interval);
+  }, [isAutoScrolling]);
 
-  const radius = windowHeight * 1;
-  const totalArea = 100;
-  const increment = totalArea / 5;
-  const startPoint = 0 - totalArea / 2;
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % 6); // Wrap around 6 cards
+    setFlippedCards(Array(6).fill(false));
+  };
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? 5 : prevIndex - 1)); // Wrap around 6 cards
+    setFlippedCards(Array(6).fill(false));
+  };
 
+  const handleCardClick = (index) => {
+    if (flippedCards[index]) {
+      // Card is currently flipped
+      setIsAutoScrolling(true); // Resume auto-scrolling
+    } else {
+      setIsAutoScrolling(false); // Pause auto-scrolling
+    }
+    setFlippedCards((prevFlipped) =>
+      prevFlipped.map((isFlipped, i) => (i === index ? !isFlipped : isFlipped))
+    );
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+    setIsAutoScrolling(false); // Stop auto-scrolling on dot click
+  };
+
+  // Card Data (using links array)
   const links = [
     {
       label: "myFlix React",
-      bg: "#c0392b",
+      bg: "red",
       short: "myFlix React",
       image: myFlix,
       url: "https://yaramyflix.netlify.app",
       description: [
         <>
-          <h4>Introduction:</h4> myFlix is a MERN stack application showcasing
-          my full-stack JavaScript skills.
+          <h4>What I Did:</h4> Built a MERN stack app to showcase movie info
+          with a secure, polished UI.
         </>,
         <>
-          <h4>Challenge:</h4> The goal was to build a robust, user-friendly web
-          application.
+          <h4>Skills:</h4> React, Node.js, Express, MongoDB, RESTful APIs, CSS,
+          JWT Authentication, Data Validation.
         </>,
         <>
-          <h4>Approach:</h4> I constructed a RESTful API using Node.js, Express,
-          and MongoDB. The client-side interface was built with React.
-        </>,
-        <>
-          <h4>Results:</h4> Overcame challenges in crafting clean code and
-          ensuring robust security measures.
+          <h4>Challenges & Wins:</h4> Mastered clean code, implemented JWT for
+          secure authentication, and applied robust input validation to ensure
+          user data safety.
         </>,
       ],
     },
@@ -60,47 +80,37 @@ const ThirdPage = () => {
       url: "https://yarazarin.github.io/meet",
       description: [
         <>
-          <h4>Introduction:</h4> This is a web application that utilizes Google
-          Authentication.
+          <h4>What I Did:</h4> Built a web app with Google Login, meeting
+          charts, and location filtering.
         </>,
         <>
-          <h4>Challenge:</h4> The goal was to create a platform where users can
-          log in, view a chart of meetings, and search and filter cities.
+          <h4>Skills:</h4> React, Google Authentication, Jest, Enzyme, D3.js,
+          PWA.
         </>,
         <>
-          <h4>Approach:</h4> The application was built using modern testing
-          technologies to ensure reliability and performance.
-        </>,
-        <>
-          <h4>Results:</h4> Successfully created a user-friendly platform with
-          Google Authentication, meeting charts, and city search and filter
-          functionalities.
+          <h4>Challenges & Wins:</h4> Ensured seamless functionality with modern
+          testing tools.
         </>,
       ],
     },
     {
       label: "myFlix Angular",
-      bg: "#27ae60",
+      bg: "green",
       short: "myFlix Angular",
       image: myAng,
       url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
       description: [
         <>
-          <h4>Introduction:</h4> myFlix Angular is a web application providing
-          comprehensive movie information.
+          <h4>What I Did:</h4> Built an Angular-based app for movie enthusiasts
+          with user account features.
         </>,
         <>
-          <h4>Challenge:</h4> The goal was to create a platform where users can
-          access information about different movies, directors, and genres.
+          <h4>Skills:</h4> Angular, TypeScript, Angular Material, SCSS, RESTful
+          APIs.
         </>,
         <>
-          <h4>Approach:</h4> The application was built using Angular, allowing
-          users to sign up, update their personal information, and create a list
-          of their favorite movies.
-        </>,
-        <>
-          <h4>Results:</h4> Successfully created a user-friendly platform for
-          movie enthusiasts.
+          <h4>Challenges & Wins:</h4> Delivered an engaging experience with
+          robust functionality.
         </>,
       ],
     },
@@ -112,48 +122,37 @@ const ThirdPage = () => {
       url: "https://yarazarin.github.io/to-do-list-app",
       description: [
         <>
-          <h4>Introduction:</h4> This is a web application with a focus on task
-          management.
+          <h4>What I Did:</h4> Designed a sleek task manager with local storage
+          and filters.
         </>,
         <>
-          <h4>Challenge:</h4> The goal was to create a platform where users can
-          add, edit, delete, and mark tasks as done, filter tasks, and save
-          tasks to local storage.
+          <h4>Skills:</h4> JavaScript, HTML, CSS, Local Storage, Responsive
+          Design.
         </>,
         <>
-          <h4>Approach:</h4> The application was built with a focus on
-          user-friendly task management functionalities.
-        </>,
-        <>
-          <h4>Results:</h4> Successfully created a task management platform with
-          functionalities to add, edit, delete, mark tasks as done, filter
-          tasks, and save tasks to local storage.
+          <h4>Challenges & Wins:</h4> Created a super-intuitive tool for staying
+          organized.
         </>,
       ],
     },
     {
       label: "R.Native Chat",
       bg: "#f39c12",
-      short: "React native Chat App",
+      short: "React Native Chat App",
       image: chat,
       url: "https://github.com/yarazarin/CHAT",
       description: [
         <>
-          <h4>Introduction:</h4> This is a messenger application.
+          <h4>What I Did:</h4> Built a messenger app with guest login, chat, and
+          camera features.
         </>,
         <>
-          <h4>Challenge:</h4> The goal was to create a platform where users can
-          log in as a guest, send and receive messages and pictures, and use the
-          camera on the Expo Go app.
+          <h4>Skills:</h4> React Native, Expo, Firebase, Camera Integration,
+          AsyncStorage.
         </>,
         <>
-          <h4>Approach:</h4> The application was built with a focus on
-          user-friendly communication functionalities.
-        </>,
-        <>
-          <h4>Results:</h4> Successfully created a communication platform with
-          functionalities to log in as a guest, send and receive messages and
-          pictures, and use the camera on the Expo Go app.
+          <h4>Challenges & Wins:</h4> Delivered smooth communication tools with
+          a friendly UI.
         </>,
       ],
     },
@@ -165,104 +164,84 @@ const ThirdPage = () => {
       url: "https://yarazarin.github.io/simple-js-app",
       description: [
         <>
-          <h4>Introduction:</h4> This is a web application with a focus on API
+          <h4>What I Did:</h4> Built a simple API explorer with Bootstrap for
+          quick JSON data access.
+        </>,
+        <>
+          <h4>Skills:</h4> JavaScript, HTML, Bootstrap, Fetch API.
+        </>,
+        <>
+          <h4>Challenges & Wins:</h4> Created an easy-to-use interface for API
           data retrieval.
-        </>,
-        <>
-          <h4>Challenge:</h4> The goal was to create a platform where users can
-          search for any API and get the data in JSON format.
-        </>,
-        <>
-          <h4>Approach:</h4> The application was built using Bootstrap for a
-          user-friendly interface.
-        </>,
-        <>
-          <h4>Results:</h4> Successfully created a platform that allows users to
-          search for any API and get the data in JSON format.
         </>,
       ],
     },
   ];
 
-  const styleLinks = (deg) => ({
-    transform: `rotate(${deg}deg)`,
-  });
-
-  const linkOver = (e, radius, link) => {
-    setHoveredLink(link);
-    const thisLink = e.target;
-    const thisHover = thisLink.nextSibling;
-
-    if (thisHover) {
-      document.body.style.backgroundColor = thisLink.dataset.color;
-    }
-  };
-
-  const linkOut = (e, radius) => {
-    const thisLink = e.target;
-    const thisHover = thisLink.nextSibling;
-    if (thisHover && !infoBoxHovered) {
-      setHoveredLink(null);
-      document.body.style.backgroundColor = "initial";
-    }
-  };
-
-  const infoBoxHoverOver = () => {
-    setInfoBoxHovered(true);
-  };
-
-  const infoBoxHoverOut = () => {
-    setInfoBoxHovered(false);
-  };
-
   return (
-    <>
-      <div className="TirdPage_container">
-        <div className="circle_menue-container">
-          <img className="line_circle moon" alt="moon" src={moon} />
-          {links.map((link, index) => {
-            const deg = startPoint + index * increment;
-            return (
-              <div key={index}>
-                <button
-                  className="rounded_link-Button"
-                  style={{
-                    ...styleLinks(deg, index),
-                  }}
-                  data-color={link.bg}
-                  onMouseOver={(e) => linkOver(e, radius, link)}
-                  onMouseOut={(e) => linkOut(e, radius)}
-                >
-                  <img
-                    className="rounded_image"
-                    src={link.image}
-                    alt={link.label}
-                  />
-                </button>
-              </div>
-            );
-          })}
-          
-          {hoveredLink && (
-            <div
-              className="infoBox"
-              onMouseEnter={infoBoxHoverOver}
-              onMouseLeave={infoBoxHoverOut}
-            >
-              <span className="info_title">{hoveredLink.label}</span>
-              <h1>{hoveredLink.title}</h1>
-              {hoveredLink.description.map((desc, index) => (
-                <p key={index}>{desc}</p>
-              ))}
-              <button onClick={() => window.open(hoveredLink.url, "_blank")}>
-                Visit Website
-              </button>
-            </div>
-          )}
-        </div>
+    <div className="TirdPage_container">
+      <h1 className="thirdpage_title_my-projects">Would you like to explore some of my projects?</h1>
+
+      <div
+        className="arrow_third_page arrow_third_page-left"
+        onClick={handlePrev}
+      >
+        <i className="fa-solid fa-chevron-left"></i>
       </div>
-    </>
+
+      <div
+        className={`tird_page-card ${
+          flippedCards[currentIndex] ? "flipped" : ""
+        }`}
+        onClick={() => handleCardClick(currentIndex)}
+        style={{ backgroundColor: links[currentIndex].bg }}
+      >
+        {!flippedCards[currentIndex] ? (
+          <div className="card-front">
+            <img
+              className="card-image"
+              src={links[currentIndex].image}
+              alt={links[currentIndex].short}
+            />
+            <h3 className="thirdpage_front_card-label">
+              {links[currentIndex].label}
+            </h3>
+          </div>
+        ) : (
+          <div className="card-back">
+            <h3>{links[currentIndex].label}</h3>
+            <div className="flip_description">
+              {links[currentIndex].description}
+            </div>
+            <a
+              href={links[currentIndex].url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Site
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div
+        className="arrow_third_page arrow_third_page-right"
+        onClick={handleNext}
+      >
+        <i className="fa-solid fa-chevron-right"></i>
+      </div>
+
+      <div className="dots-container">
+        {links.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${currentIndex === index ? "active" : ""}`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default ThirdPage;
+export default TirdPage;

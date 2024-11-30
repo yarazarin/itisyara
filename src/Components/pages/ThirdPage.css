@@ -1,145 +1,194 @@
-/* Some styles are applied directly in the component's JSX code due to their dynamic nature. */
 .TirdPage_container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  top: -5rem;
+  width: 100%;
+  height: 75vh;
+  flex-direction: column;
   z-index: 999999;
 }
 
-.rounded_image {
-  display: block;
+.thirdpage_title_my-projects {
   position: relative;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  padding: 3px;
-  transition: 0.5s;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-
-.rounded_image:hover {
-  transform: scale(1.5) rotate(360deg);
-  background-color: transparent;
-  border: 3px solid #ffffff;
-  transition: 0.5s;
-}
-
-.line_circle {
-  position: fixed;
-  left: -290px;
-  top: -20px;
-  width: 520px;
-  height: 520px;
-  border-radius: 50%;
-  border: 3px solid #ffffff59;
-  padding: 50px;
-}
-.moon {
-  animation: rotate 30s linear infinite;
-  z-index: 9;
-  rotate: 90deg;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-}
-
-.infoBox {
-  position: absolute;
-  max-width: 800px;
-  padding: 20px;
-  background-image: linear-gradient(90deg, #00000000 0%, #ffffff28 100%);
-  border-radius: 10px;
-  text-align: left;
-  left: 25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 3rem;
-}
-
-.infoBox h4 {
-  color: #ffffff;
   font-size: 1.5rem;
-  margin-top: 1rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.rounded_link-Button {
-  position: fixed;
-  padding-left: 190px;
-  transform-origin: -13%;
-  border: none;
-  text-decoration: none;
-  left: 5px;
-  top: 13rem;
-  z-index: 9;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.infoBox button {
+/* Card container with 3D perspective */
+.tird_page-card {
+  position: relative;
   width: 100%;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #ffffff28, #000, #ffffff28);
-  background-size: 200% auto;
-  background-position: right center;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  height: 60vh;
+  perspective: 1000px; /* Enables 3D effect */
   cursor: pointer;
+}
+
+/* Front and back card faces */
+.tird_page-card .card-front,
+.tird_page-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when not visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Front card styling */
+.tird_page-card .card-front {
+  position: relative;
+  transform: rotateY(0deg); /* Show the front */
+  color: #000000;
+}
+
+/* Back card styling */
+.tird_page-card .card-back {
+  background-color: #f4f1ff;
+  transform: rotateY(180deg); /* Flips the back face */
+  color: #000000;
+}
+
+.card-back h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 2px;
+}
+.card-back a {
+  margin-top: 20px;
+  background-color: #0059ff;
+  border: #00000039 2px solid;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* Flip card */
+.tird_page-card.flipped .card-front {
+  transform: rotateY(180deg); /* Hide the front */
+}
+
+.tird_page-card.flipped .card-back {
+  transform: rotateY(360deg); /* Show the back */
+}
+
+.thirdpage_front_card-label {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+}
+
+.flip_description {
+  position: relative;
+  direction: ltr;
+  text-align: left;
+  font-size: 0.9rem;
+  padding: 8px 18px 18px 18px;
+  box-shadow: #00000039 0px 0px 10px;
+  border-radius: 12px;
+  top: 8px;
+}
+.flip_description h4 {
   font-size: 1rem;
   font-weight: 600;
-  transition: all 1s ease;
+  color: #ff0000;
+  margin-top: 5px;
+}
+/* Navigation arrows */
+.arrow_third_page {
+  position: absolute;
+  font-size: 2.8rem;
+  color: #000;
+  cursor: pointer;
+  z-index: 1000;
+  user-select: none;
 }
 
-.infoBox button:hover {
-  background-position: left center;
-  box-shadow: 0 0 2px 0 rgb(255, 255, 255);
+.arrow_third_page-left,
+.arrow_third_page-right {
+  background-color: #eafaff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.info_title {
-  font-size: 2rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
+.arrow_third_page-left {
+  left: 10%;
 }
 
-@media (max-width: 768px) {
-  
-  .circle_menue-container {
-    position: fixed;
-    scale: 0.6;
-    top: 8%;
-    left: 85%;
+.arrow_third_page-right {
+  right: 10%;
+}
+
+/* Dot navigation */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+.dot {
+  height: 5px;
+  width: 20px;
+  margin: 0 8px;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 1px 0px white;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  z-index: 99998;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-image {
+    height: 100px;
+    width: 100px;
+  }
+  .flip_description {
+    width: 60%;
+    font-size: 0.6rem;
+  }
+  .card-back a {
+    margin-top: 15px;
+    background-color: #0059ff;
+    border: #00000039 2px solid;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
     z-index: 999999;
-    transform: rotate(90deg);
+    cursor: pointer;
   }
-
-  .infoBox {
-    transform: rotate(270deg);
-    width: 550px;
-    height: 450px;
-    font-size: 1rem;
-    padding: 10px;
-    left: 16rem;
-    top: 2rem;
-    z-index: 999999;
-  }
-  .infoBox h4 {
-    font-size: 1.5rem;
-  }
-  .rounded_image {
-    transform: rotate(270deg);
+  .arrow_third_page-left,
+  .arrow_third_page-right {
+    font-size: 2rem;
   }
 }
