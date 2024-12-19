@@ -113,3 +113,9 @@ titr {
     height: 30vh;
   }
 }
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .second_page {
+    height: 35rem;
+}
+}
