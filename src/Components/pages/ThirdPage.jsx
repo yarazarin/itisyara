@@ -52,7 +52,7 @@ const TirdPage = () => {
   const links = [
     {
       label: "myFlix React",
-      bg: "red",
+      bg: "#55efc4",
       short: "myFlix React",
       image: myFlix,
       url: "https://yaramyflix.netlify.app",
@@ -74,7 +74,7 @@ const TirdPage = () => {
     },
     {
       label: "Meet App",
-      bg: "#16a085",
+      bg: "#81ecec",
       short: "Meet App",
       image: meet,
       url: "https://yarazarin.github.io/meet",
@@ -95,7 +95,7 @@ const TirdPage = () => {
     },
     {
       label: "myFlix Angular",
-      bg: "green",
+      bg: "#74b9ff",
       short: "myFlix Angular",
       image: myAng,
       url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
@@ -116,7 +116,7 @@ const TirdPage = () => {
     },
     {
       label: "ToDo App",
-      bg: "#8e44ad",
+      bg: "#a29bfe",
       short: "ToDo App",
       image: todo,
       url: "https://yarazarin.github.io/to-do-list-app",
@@ -137,7 +137,7 @@ const TirdPage = () => {
     },
     {
       label: "R.Native Chat",
-      bg: "#f39c12",
+      bg: "#ff7675",
       short: "React Native Chat App",
       image: chat,
       url: "https://github.com/yarazarin/CHAT",
@@ -158,7 +158,7 @@ const TirdPage = () => {
     },
     {
       label: "API Project",
-      bg: "#2980b9",
+      bg: "#e84393",
       short: "API Pokemon Project",
       image: api,
       url: "https://yarazarin.github.io/simple-js-app",
@@ -198,6 +198,7 @@ const TirdPage = () => {
       >
         {!flippedCards[currentIndex] ? (
           <div className="card-front">
+            <div className="card-front-frame">
             <img
               className="card-image"
               src={links[currentIndex].image}
@@ -206,6 +207,7 @@ const TirdPage = () => {
             <h3 className="thirdpage_front_card-label">
               {links[currentIndex].label}
             </h3>
+            </div>
           </div>
         ) : (
           <div className="card-back">
