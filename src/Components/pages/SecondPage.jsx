@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import "./SecondPage.css";
-import Arrow from "../Arrow";
 import HorizontalMenue from "../HorizontalMenu";
 
 const SecondPage = () => {
@@ -93,7 +92,6 @@ const SecondPage = () => {
           </ul>
         </div>
       </div>
-      <Arrow />
       <HorizontalMenue />
     </div>
     </>
