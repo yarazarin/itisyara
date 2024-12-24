@@ -57,19 +57,18 @@ const TirdPage = () => {
       image: myFlix,
       url: "https://yaramyflix.netlify.app",
       description: [
-        <>
-          <h4>What I Did:</h4> Built a MERN stack app to showcase movie info
-          with a secure, polished UI.
-        </>,
-        <>
-          <h4>Skills:</h4> React, Node.js, Express, MongoDB, RESTful APIs, CSS,
-          JWT Authentication, Data Validation.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Mastered clean code, implemented JWT for
-          secure authentication, and applied robust input validation to ensure
-          user data safety.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Built a MERN stack app to showcase movie info with a secure, polished UI.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>React, Node.js, Express, MongoDB, RESTful APIs, CSS, JWT Authentication, Data Validation.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Mastered clean code, implemented JWT for secure authentication, and applied robust input validation to ensure user data safety.</p>
+        </div>,
       ],
     },
     {
@@ -79,18 +78,18 @@ const TirdPage = () => {
       image: meet,
       url: "https://yarazarin.github.io/meet",
       description: [
-        <>
-          <h4>What I Did:</h4> Built a web app with Google Login, meeting
-          charts, and location filtering.
-        </>,
-        <>
-          <h4>Skills:</h4> React, Google Authentication, Jest, Enzyme, D3.js,
-          PWA.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Ensured seamless functionality with modern
-          testing tools.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Built a web app with Google Login, meeting charts, and location filtering.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>React, Google Authentication, Jest, Enzyme, D3.js, PWA.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Ensured seamless functionality with modern testing tools.</p>
+        </div>,
       ],
     },
     {
@@ -100,18 +99,18 @@ const TirdPage = () => {
       image: myAng,
       url: "https://yarazarin.github.io/myFlix-Angular-client/welcome",
       description: [
-        <>
-          <h4>What I Did:</h4> Built an Angular-based app for movie enthusiasts
-          with user account features.
-        </>,
-        <>
-          <h4>Skills:</h4> Angular, TypeScript, Angular Material, SCSS, RESTful
-          APIs.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Delivered an engaging experience with
-          robust functionality.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Built an Angular-based app for movie enthusiasts with user account features.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>Angular, TypeScript, Angular Material, SCSS, RESTful APIs.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Delivered an engaging experience with robust functionality.</p>
+        </div>,
       ],
     },
     {
@@ -121,18 +120,18 @@ const TirdPage = () => {
       image: todo,
       url: "https://yarazarin.github.io/to-do-list-app",
       description: [
-        <>
-          <h4>What I Did:</h4> Designed a sleek task manager with local storage
-          and filters.
-        </>,
-        <>
-          <h4>Skills:</h4> JavaScript, HTML, CSS, Local Storage, Responsive
-          Design.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Created a super-intuitive tool for staying
-          organized.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Designed a sleek task manager with local storage and filters.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>JavaScript, HTML, CSS, Local Storage, Responsive Design.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Created a super-intuitive tool for staying organized.</p>
+        </div>,
       ],
     },
     {
@@ -142,18 +141,18 @@ const TirdPage = () => {
       image: chat,
       url: "https://github.com/yarazarin/CHAT",
       description: [
-        <>
-          <h4>What I Did:</h4> Built a messenger app with guest login, chat, and
-          camera features.
-        </>,
-        <>
-          <h4>Skills:</h4> React Native, Expo, Firebase, Camera Integration,
-          AsyncStorage.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Delivered smooth communication tools with
-          a friendly UI.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Built a messenger app with guest login, chat, and camera features.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>React Native, Expo, Firebase, Camera Integration, AsyncStorage.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Delivered smooth communication tools with a friendly UI.</p>
+        </div>,
       ],
     },
     {
@@ -163,20 +162,22 @@ const TirdPage = () => {
       image: api,
       url: "https://yarazarin.github.io/simple-js-app",
       description: [
-        <>
-          <h4>What I Did:</h4> Built a simple API explorer with Bootstrap for
-          quick JSON data access.
-        </>,
-        <>
-          <h4>Skills:</h4> JavaScript, HTML, Bootstrap, Fetch API.
-        </>,
-        <>
-          <h4>Challenges & Wins:</h4> Created an easy-to-use interface for API
-          data retrieval.
-        </>,
+        <div>
+          <h4>What I Did:</h4>
+          <p>Built a simple API explorer with Bootstrap for quick JSON data access.</p>
+        </div>,
+        <div>
+          <h4>Skills:</h4>
+          <p>JavaScript, HTML, Bootstrap, Fetch API.</p>
+        </div>,
+        <div>
+          <h4>Challenges & Wins:</h4>
+          <p>Created an easy-to-use interface for API data retrieval.</p>
+        </div>,
       ],
     },
   ];
+  
 
   return (
     <div className="TirdPage_container">
