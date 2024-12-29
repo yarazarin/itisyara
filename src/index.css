@@ -2,22 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Montserrat";
 }
 
 button {
   padding: 0;
   margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
   background: none;
   border: none;
   cursor: pointer;
