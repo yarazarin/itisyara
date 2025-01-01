@@ -29,17 +29,16 @@
 .Rights {
   position: absolute;
   top: 60px;
-  float: left;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 0.8rem;
+  overflow: hidden;
 }
 
 .Rights pre {
   color: white;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 @media screen and (max-width: 680px) {
