@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./FirstPage.css";
-import Yara_Zarin_Resume from "../../doc/Yara_Zarin_Resume_2025.pdf";
+import Yara_Zarin_Resume from "../../doc/Yara_Zarin_Resume_2025_.pdf";
 import paper from "../../sound/paper.mp3";
 import MatrixRain from "../MatrixRain";
 
