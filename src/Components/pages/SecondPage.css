@@ -46,6 +46,7 @@ titr {
   -webkit-text-stroke-color: #ffffff;
   -webkit-text-fill-color: #000000;
 }
+
 .part p,
 .part ul {
   font-size: 1rem;
@@ -91,7 +92,6 @@ titr {
     flex-direction: column;
     align-items: center;
     top: 7%;
-    
   }
 
   .part {
@@ -117,5 +117,5 @@ titr {
 @media screen and (max-width: 768px) and (orientation: portrait) {
   .second_page {
     height: 35rem;
-}
+  }
 }

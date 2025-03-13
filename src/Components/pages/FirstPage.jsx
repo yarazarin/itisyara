@@ -92,7 +92,7 @@ const FirstPage = () => {
         >
           Download My Resume
           <br />
-          <i class="fa-solid fa-download"></i>
+          <i className="fa-solid fa-download"></i>
         </a>
         <span className="resume_button_base"></span>
       </div>
