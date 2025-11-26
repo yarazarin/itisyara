@@ -2,7 +2,7 @@ import React from "react";
 import frameImg from "../img/frame.png";
 import "./Door.css";
 
-export default function Door() {
+export default function Door({ onDoorClick }) {
     const [isOpen, setIsOpen] = React.useState(false);
 
     React.useEffect(() => {
@@ -18,13 +18,20 @@ export default function Door() {
 
     const handleClick = (e) => {
         e.preventDefault();
+        e.stopPropagation();
+
         // start fade-out
         const overlay = document.querySelector(
             ".fade-transition"
         );
         if (overlay) overlay.classList.add("active");
-        // navigate after 2s (half of 4s total transition)
-        setTimeout(() => navigate("/pageX"), 2000);
+
+        // call the parent handler after 2s (half of 4s total transition)
+        setTimeout(() => {
+            if (onDoorClick) {
+                onDoorClick();
+            }
+        }, 2000);
     };
 
     return (
@@ -33,7 +40,7 @@ export default function Door() {
             <div className="container">
                 <div className="flipbox">
                     <a
-                        href="/pageX"
+                        href="#"
                         className="framedoor"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
@@ -42,7 +49,7 @@ export default function Door() {
                         <img
                             src={frameImg}
                             className="frame"
-                            alt=""
+                            alt="Door to new experience"
                         />
                         <div
                             className={`flipbox-active ${

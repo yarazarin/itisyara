@@ -6,7 +6,7 @@
     min-height: 100%;
     background-color: black;
     overflow: hidden;
-    animation: fadeInPage 2.2s ease-in;
+    animation: fadeInPage 7s ease-in;
     top: 120px;
 }
 
@@ -30,7 +30,7 @@
 .framedoor {
     position: relative;
     display: block;
-    background-image: url("../img/color.jpg");
+    background-image: url("../img/giphy.gif");
     background-size: cover;
     background-position: center;
     border-top-right-radius: 40%;
