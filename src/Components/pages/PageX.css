@@ -11,16 +11,60 @@
     opacity: 1;
 }
 
-.backToMainButton{
+.backToMainButton {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     top: 20px;
-    left: 20px;
     z-index: 10;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: 0.5s;
+    box-shadow: #a8a8a856 0px 1px 0px 1px;
+    text-align: center;
+    width: 100px;
+    height: 43px;
+    border-top-left-radius: 50% 90%;
+    border-bottom-right-radius: 50% 100%;
+}
+
+.backToMainButton:hover {
+    background-color: #ff0000;
+}
+
+.nextButton {
+    position: relative;
+    top: 80px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: #a8a8a856 0px 1px 0px 1px;
+    text-align: center;
+    width: 180px;
+    height: 43px;
+    border-top-left-radius: 30% 100%;
+    border-bottom-right: 30% 100%;
+}
+
+.nextButton:hover {
+    content: "Yes!";
+    background-color: #13e600;
+}
+
+
+.pagex_title {
+    position: relative;
+    top: 290px;
+    text-align: center;
 }

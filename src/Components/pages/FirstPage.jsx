@@ -18,6 +18,16 @@ const FirstPage = ({ onDoorClick }) => {
     const [showArrow, setShowArrow] = useState(false);
     const [isTyping, setIsTyping] = useState(true);
 
+    const handlePageClick = () => {
+        if (isTyping) {
+            setTypedText(textLines);
+            setCurrentLineIndex(textLines.length);
+            setCurrentCharIndex(0);
+            setIsTyping(false);
+            setShowArrow(true);
+        }
+    };
+
     useEffect(() => {
         const typingDelay = 80;
         let timeoutId;
@@ -77,7 +87,11 @@ const FirstPage = ({ onDoorClick }) => {
 
     return (
         <>
-            <section className="first page" id="sec1">
+            <section
+                className="first page"
+                id="sec1"
+                onClick={handlePageClick}
+            >
                 <Door onDoorClick={onDoorClick} />
                 <div className="title title_a">
                     <div className="typed-text-container">

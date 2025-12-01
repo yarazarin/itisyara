@@ -38,7 +38,7 @@ const MatrixRain = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#fff2"; // green matrix text color is: #0F0
+      ctx.fillStyle = "#0F04"; // green matrix text color is: #0F0
       ctx.font = font_size + "px arial";
 
       for (let i = 0; i < drops.length; i++) {

@@ -1,0 +1,42 @@
+.images-container {
+    position: absolute;
+    display: flex;
+    height: auto;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) scale(20%);
+    z-index: 80;
+}
+
+.left-image {
+    flex: 0.2;
+    height: 400px;
+    width: 190px;
+    opacity: 0;
+    transform: translateX(-100vw);
+    animation: slideInLeft 10s ease forwards;
+    z-index: 8;
+}
+
+.right-image {
+    flex: 0.8;
+    height: 400px;
+    opacity: 0;
+    transform: translateX(100vw);
+    animation: slideInRight 10s ease forwards;
+    z-index: 8;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(70px);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
