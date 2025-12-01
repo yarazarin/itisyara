@@ -10,7 +10,7 @@ const textLines = [
 "making them happy and successful."
 ];
 
-const PageX = ({ onBack }) => {
+const PageX = ({ onBack, onNext }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [typedText, setTypedText] = useState([]);
     const [currentLineIndex, setCurrentLineIndex] = useState(0);
@@ -120,6 +120,7 @@ const PageX = ({ onBack }) => {
                         className="nextButton"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
+                        onClick={onNext}
                     >
                         <div style={{position: 'relative'}}>
                             <span style={{position: 'absolute', left: 0, top: 0, bottom: 0, right: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: isHovered ? 0 : 1, transition: 'opacity 0.8s ease'}}>Are you ready?</span>

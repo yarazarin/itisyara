@@ -7,11 +7,13 @@ import ThirdPage from "./Components/pages/ThirdPage";
 import ContactForm from "./Components/pages/ContactForm";
 import FirstPage from "./Components/pages/FirstPage";
 import PageX from "./Components/pages/PageX";
+import CaseStudyPage from "./Components/pages/CaseStudyPage";
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
     const [showPageX, setShowPageX] = useState(false);
+    const [showCaseStudy, setShowCaseStudy] = useState(false);
     const sliderRef = useRef(null);
 
     useEffect(() => {
@@ -174,10 +176,23 @@ const App = () => {
 
     const handleBackToMain = () => {
         setShowPageX(false);
+        setShowCaseStudy(false);
     };
 
+    const handleGoToCaseStudy = () => {
+        setShowCaseStudy(true);
+    };
+
+    const handleBackFromCaseStudy = () => {
+        setShowCaseStudy(false);
+    };
+
+    if (showCaseStudy) {
+        return <CaseStudyPage onBack={handleBackFromCaseStudy} />;
+    }
+
     if (showPageX) {
-        return <PageX onBack={handleBackToMain} />;
+        return <PageX onBack={handleBackToMain} onNext={handleGoToCaseStudy} />;
     }
 
     return (
