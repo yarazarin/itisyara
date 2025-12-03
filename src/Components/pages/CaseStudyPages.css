@@ -1,0 +1,45 @@
+/* page wheel 1 styles */
+.page-1-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+}
+
+.page-1-custom h1 {
+    font-size: 1 rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+    animation: rotateText .8s linear 1 forwards;
+    color: #fffaf0;
+}
+
+@keyframes rotateText {
+    100% {
+        transform: rotate(360deg);
+        font-size: 2.5rem;
+    }
+}
+.page-1-custom p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* page wheel 2 styles */
+/* page wheel 3 styles */
+/* page wheel 4 styles */
+/* page wheel 5 styles */
+/* page wheel 6 styles */
+/* page wheel 7 styles */
+/* page wheel 8 styles */
+/* page wheel 9 styles */
+/* page wheel 10 styles */

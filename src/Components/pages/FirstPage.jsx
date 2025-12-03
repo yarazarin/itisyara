@@ -121,7 +121,7 @@ const FirstPage = ({ onDoorClick }) => {
                                                 }
                                             >
                                                 {textPart}
-                                                {index ===
+                                                {((index ===
                                                     currentLineIndex &&
                                                     partIndex ===
                                                         line.split(
@@ -134,9 +134,19 @@ const FirstPage = ({ onDoorClick }) => {
                                                             currentLineIndex
                                                         ]
                                                             ?.length &&
-                                                    isTyping && (
+                                                    isTyping) ||
+                                                    (!isTyping &&
+                                                        index ===
+                                                            typedText.length -
+                                                                1 &&
+                                                        partIndex ===
+                                                            line.split(
+                                                                "\n"
+                                                            )
+                                                                .length -
+                                                                1)) && (
                                                         <span className="typing-cursor">
-                                                            I
+                                                            |
                                                         </span>
                                                     )}
                                                 {partIndex <
@@ -152,25 +162,21 @@ const FirstPage = ({ onDoorClick }) => {
                                     )}
                             </p>
                         ))}
-                        {!isTyping && (
-                            <span className="typing-cursor blinking">
-                                I
-                            </span>
-                        )}
-                    </div>
                     {showArrow && (
                         <>
                             <img
                                 src={arrow}
-                                className="arrow_from-door"
-                                alt="Arrow pointing to door"
+                                className="arrow_door"
+                                alt="Arrow pointing to the door"
                             />
-                            <div className="arrow_to-door"></div>
                         </>
                     )}
+                    </div>
 
                     <br />
                     <br />
+                    <span className="resume_button_base"></span>
+                </div>
                     <a
                         className="resume_button btn-shine"
                         href={Yara_Zarin_Resume}
@@ -182,8 +188,6 @@ const FirstPage = ({ onDoorClick }) => {
                             style={{ marginLeft: "10px" }}
                         ></i>
                     </a>
-                    <span className="resume_button_base"></span>
-                </div>
             </section>
         </>
     );
