@@ -14,24 +14,56 @@
 }
 
 .page-1-custom h1 {
-    font-size: 1 rem;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    max-width: 55%;
+    font-size: 1rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     line-height: 1.5;
-    animation: rotateText .8s linear 1 forwards;
     color: #fffaf0;
 }
 
 @keyframes rotateText {
     100% {
         transform: rotate(360deg);
-        font-size: 2.5rem;
+        font-size: .8rem;
+        line-height: 1.1;
+        text-align: left;
     }
 }
-.page-1-custom p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.page-1-p {
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    max-width: 55%;
+    font-size: 0.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: rotateText 0.8s linear 1 forwards;
+}
+
+@media (min-width: 1200px) {
+    .page-1-custom h1 {
+        font-size: 1.5rem;
+        left: 150px;
+    }
+    .page-1-p {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    max-width: 65%;
+    font-size: 0.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: rotateText 0.8s linear 1 forwards;
+}
+@keyframes rotateText {
+    100% {
+        transform: rotate(360deg);
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
 }
 
 /* page wheel 2 styles */
