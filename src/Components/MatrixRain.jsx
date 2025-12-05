@@ -1,6 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-const MatrixRain = () => {
+const MatrixRain = ({ isHovered }) => {
+  const isHoveredRef = useRef(isHovered);
+
+  useEffect(() => {
+    isHoveredRef.current = isHovered;
+  }, [isHovered]);
+
   useEffect(() => {
     // get the canvas element and its context
     const canvas = document.getElementById("c");
@@ -38,7 +44,7 @@ const MatrixRain = () => {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#0F04"; // green matrix text color is: #0F0
+      ctx.fillStyle = isHoveredRef.current ? "#F00" : "#0F0"; // green matrix text color is: #0F0
       ctx.font = font_size + "px arial";
 
       for (let i = 0; i < drops.length; i++) {

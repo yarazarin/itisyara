@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./PageX.css";
-import Leaf from "../leaf/leaf";
 import MatrixRain from "../MatrixRain";
 
 const textLines = [
-    "Case Study?? No! It's not jsut a case study. It's show you how I made a project from scratch secure, fast, beautiful and exceeded my client's expectations making them happy! I want to show you how I made a MERN project and trogh that you know how I think and how I made a project ",
+    "Case Study??",
+    "No!",
+    "It's not jsut a case study.",
+    "It's show how I made a project from scratch,",
+    "secure, fast, beautiful and exceeded my client's expectations making them happy! I want to show you how I made a MERN project and trogh that you know how I think and how I work.",
 ];
 
 const PageX = ({ onBack, onNext }) => {
@@ -140,8 +143,6 @@ const PageX = ({ onBack, onNext }) => {
                                     )}
                             </p>
                         ))}
-                    </div>
-                </div>
                 {showNext && (
                     <button
                         className="nextButton"
@@ -199,9 +200,10 @@ const PageX = ({ onBack, onNext }) => {
                         </div>
                     </button>
                 )}
+                    </div>
+                </div>
             </div>
-            <Leaf />
-            <MatrixRain />
+            <MatrixRain isHovered={isHovered} />
         </div>
     );
 };

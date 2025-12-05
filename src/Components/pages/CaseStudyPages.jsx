@@ -5,7 +5,7 @@ import Joinimg from "./Joinimg"
 export const Page1 = () => (
     <div className="page-1-custom wheel-pages_All">
         <h1 className="page-1-h1">
-            Case Study??
+            test
         </h1>
         <Joinimg />
     </div>
