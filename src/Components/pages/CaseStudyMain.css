@@ -56,13 +56,13 @@
     display: flex;
     width: 1100vw; /* 11 sections * 100vw */
     height: 100vh;
-    transition: transform 0.5s ease, background-position 0.5s ease;
+    transition: transform 0.3s ease, background-position 0.3s ease;
     margin: 0;
     padding: 0;
     background-image: url('../../img/longtoronto.png');
     background-size: auto 100vh;
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 150vw 0;
 }
 
 .section {

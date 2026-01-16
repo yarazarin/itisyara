@@ -14,13 +14,12 @@ const caseStudyPages = [
 const CaseStudyMain = ({ onBack }) => {
     const [currentSection, setCurrentSection] = useState(0);
     const containerRef = useRef(null);
+    const accumulatedScrollRef = useRef(0);
 
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault();
-            // Use deltaY for proportional scrolling - typically 100-120 per wheel notch
-            const scrollAmount = e.deltaY / 300; // Adjust divisor for scroll sensitivity
-            setCurrentSection(prev => Math.max(0, Math.min(prev + scrollAmount, caseStudyPages.length - 1)));
+            accumulatedScrollRef.current += e.deltaY;
         };
 
         const container = containerRef.current;
@@ -33,6 +32,21 @@ const CaseStudyMain = ({ onBack }) => {
                 container.removeEventListener('wheel', handleWheel);
             }
         };
+    }, []);
+
+    useEffect(() => {
+        let animationId;
+        const animate = () => {
+            if (accumulatedScrollRef.current !== 0) {
+                const scrollAmount = accumulatedScrollRef.current / 2000; // Slow down the scroll
+                setCurrentSection(prev => Math.max(0, Math.min(prev + scrollAmount, caseStudyPages.length - 1)));
+                accumulatedScrollRef.current *= 0.95; // Dampen the accumulated scroll
+            }
+            animationId = requestAnimationFrame(animate);
+        };
+        animationId = requestAnimationFrame(animate);
+
+        return () => cancelAnimationFrame(animationId);
     }, []);
 
     const handleBackClick = () => {
