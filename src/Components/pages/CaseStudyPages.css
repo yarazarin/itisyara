@@ -1,69 +1,261 @@
-/* page wheel 1 styles */
-.page-1-custom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    padding: 20px;
+/* General page styles */
+.page-1-custom,
+.page-2-custom,
+.page-3-custom,
+.page-4-custom,
+.page-5-custom,
+.page-6-custom,
+.page-7-custom,
+.page-8-custom,
+.page-9-custom,
+.page-10-custom,
+.page-11-custom {
     height: 100vh;
     width: 100vw;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.page-1-custom h1 {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    max-width: 55%;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    line-height: 1.5;
+/* Card container styles */
+.cardex-page-1,
+.cardex-page-2,
+.cardex-page-3,
+.cardex-page-4,
+.cardex-page-5,
+.cardex-page-6,
+.cardex-page-7,
+.cardex-page-8,
+.cardex-page-9,
+.cardex-page-10,
+.cardex-page-11 {
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    animation: shown 3s ease forwards;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes shown {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading styles */
+.page-1-h1,
+.page-2-h1,
+.page-3-h1,
+.page-4-h1,
+.page-5-h1,
+.page-6-h1,
+.page-7-h1,
+.page-8-h1,
+.page-9-h1,
+.page-10-h1,
+.page-11-h1 {
+    font-size: 2rem;
     color: #fffaf0;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(4, 0, 255, 0.5);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
 }
 
-@keyframes rotateText {
-    100% {
-        transform: rotate(360deg);
-        font-size: .8rem;
-        line-height: 1.1;
-        text-align: left;
-    }
-}
-.page-1-p {
-    position: absolute;
-    top: 130px;
-    left: 50px;
-    max-width: 55%;
-    font-size: 0.2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    animation: rotateText 0.8s linear 1 forwards;
+/* Paragraph styles */
+.page-1-p,
+.page-2-p,
+.page-3-p,
+.page-4-p,
+.page-5-p,
+.page-6-p,
+.page-7-p,
+.page-8-p,
+.page-9-p,
+.page-10-p,
+.page-11-p {
+    font-size: 1.1rem;
+    color: #fffaf0;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
 }
 
-@media (min-width: 1200px) {
-    .page-1-custom h1 {
-        font-size: 1.5rem;
-        left: 150px;
+/* Responsive breakpoints */
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .cardex-page-1,
+    .cardex-page-2,
+    .cardex-page-3,
+    .cardex-page-4,
+    .cardex-page-5,
+    .cardex-page-6,
+    .cardex-page-7,
+    .cardex-page-8,
+    .cardex-page-9,
+    .cardex-page-10,
+    .cardex-page-11 {
+        width: 95%;
+        padding: 1.5rem;
+        max-width: none;
     }
-    .page-1-p {
-    position: absolute;
-    top: 150px;
-    left: 150px;
-    max-width: 65%;
-    font-size: 0.2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    animation: rotateText 0.8s linear 1 forwards;
-}
-@keyframes rotateText {
-    100% {
-        transform: rotate(360deg);
-        font-size: 1.2rem;
+
+    .page-1-h1,
+    .page-2-h1,
+    .page-3-h1,
+    .page-4-h1,
+    .page-5-h1,
+    .page-6-h1,
+    .page-7-h1,
+    .page-8-h1,
+    .page-9-h1,
+    .page-10-h1,
+    .page-11-h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .page-1-p,
+    .page-2-p,
+    .page-3-p,
+    .page-4-p,
+    .page-5-p,
+    .page-6-p,
+    .page-7-p,
+    .page-8-p,
+    .page-9-p,
+    .page-10-p,
+    .page-11-p {
+        font-size: 1rem;
         line-height: 1.5;
     }
 }
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .page-1-custom,
+    .page-2-custom,
+    .page-3-custom,
+    .page-4-custom,
+    .page-5-custom,
+    .page-6-custom,
+    .page-7-custom,
+    .page-8-custom,
+    .page-9-custom,
+    .page-10-custom,
+    .page-11-custom {
+        padding: 1rem;
+    }
+
+    .cardex-page-1,
+    .cardex-page-2,
+    .cardex-page-3,
+    .cardex-page-4,
+    .cardex-page-5,
+    .cardex-page-6,
+    .cardex-page-7,
+    .cardex-page-8,
+    .cardex-page-9,
+    .cardex-page-10,
+    .cardex-page-11 {
+        width: 100%;
+        padding: 1.2rem;
+        border-radius: 10px;
+        margin: 0 0.5rem;
+    }
+
+    .page-1-h1,
+    .page-2-h1,
+    .page-3-h1,
+    .page-4-h1,
+    .page-5-h1,
+    .page-6-h1,
+    .page-7-h1,
+    .page-8-h1,
+    .page-9-h1,
+    .page-10-h1,
+    .page-11-h1 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .page-1-p,
+    .page-2-p,
+    .page-3-p,
+    .page-4-p,
+    .page-5-p,
+    .page-6-p,
+    .page-7-p,
+    .page-8-p,
+    .page-9-p,
+    .page-10-p,
+    .page-11-p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        text-align: left;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+    .cardex-page-1,
+    .cardex-page-2,
+    .cardex-page-3,
+    .cardex-page-4,
+    .cardex-page-5,
+    .cardex-page-6,
+    .cardex-page-7,
+    .cardex-page-8,
+    .cardex-page-9,
+    .cardex-page-10,
+    .cardex-page-11 {
+        max-width: 700px;
+        padding: 3rem;
+    }
+
+    .page-1-h1,
+    .page-2-h1,
+    .page-3-h1,
+    .page-4-h1,
+    .page-5-h1,
+    .page-6-h1,
+    .page-7-h1,
+    .page-8-h1,
+    .page-9-h1,
+    .page-10-h1,
+    .page-11-h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-1-p,
+    .page-2-p,
+    .page-3-p,
+    .page-4-p,
+    .page-5-p,
+    .page-6-p,
+    .page-7-p,
+    .page-8-p,
+    .page-9-p,
+    .page-10-p,
+    .page-11-p {
+        font-size: 1.2rem;
+    }
 }
 
 /* page wheel 2 styles */
@@ -75,3 +267,4 @@
 /* page wheel 8 styles */
 /* page wheel 9 styles */
 /* page wheel 10 styles */
+/* page wheel 11 styles */

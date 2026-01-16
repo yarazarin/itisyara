@@ -7,7 +7,7 @@ import ThirdPage from "./Components/pages/ThirdPage";
 import ContactForm from "./Components/pages/ContactForm";
 import FirstPage from "./Components/pages/FirstPage";
 import PageX from "./Components/pages/PageX";
-import CaseStudyPage from "./Components/pages/CaseStudyPage";
+import CaseStudyMain from "./Components/pages/CaseStudyMain";
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -188,7 +188,7 @@ const App = () => {
     };
 
     if (showCaseStudy) {
-        return <CaseStudyPage onBack={handleBackFromCaseStudy} />;
+        return <CaseStudyMain onBack={handleBackFromCaseStudy} />;
     }
 
     if (showPageX) {

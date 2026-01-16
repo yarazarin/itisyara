@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './CaseStudyPage.css';
+import './CaseStudyMain.css';
 import penImage from '../../img/pen.png';
 import {
     Page1, Page2, Page3, Page4, Page5,
@@ -11,7 +11,7 @@ const caseStudyPages = [
     <Page6 />, <Page7 />, <Page8 />, <Page9 />, <Page10 />
 ];
 
-const CaseStudyPage = ({ onBack }) => {
+const CaseStudyMain = ({ onBack }) => {
     const [currentSection, setCurrentSection] = useState(0);
     const containerRef = useRef(null);
 
@@ -42,11 +42,8 @@ const CaseStudyPage = ({ onBack }) => {
     };
 
     return (
-        <div className="case-study-page" ref={containerRef}>
-            <button className="back-button" onClick={handleBackClick}>
-                ← Back
-            </button>
-            {currentSection >= 1 && (
+        <>
+        {currentSection >= 1 && (
                 <img
                     src={penImage}
                     alt="pen"
@@ -58,7 +55,12 @@ const CaseStudyPage = ({ onBack }) => {
                     }}
                 />
             )}
-            <div className="sections-container" style={{ transform: `translateX(-${currentSection * 100}vw)` }}>
+        <div className="case-study-page" ref={containerRef}>
+            <button className="back-button" onClick={handleBackClick}>
+                ← Back
+            </button>
+
+            <div className="sections-container" style={{ transform: `translateX(-${currentSection * 100}vw)`, backgroundPosition: `${100 + currentSection * 30}vw 0` }}>
                 {caseStudyPages.map((pageComponent, index) => (
                     <div key={index} className="section">
                         <div className="section-content">
@@ -77,7 +79,8 @@ const CaseStudyPage = ({ onBack }) => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 
-export default CaseStudyPage;
+export default CaseStudyMain;

@@ -1,9 +1,10 @@
 .images-container {
-    position: relative;
+    position: absolute;
     display: flex;
     height: auto;
-    transform: translateX(30vw) scale(50%);
+    transform: translateX(0vw) scale(90%);
     z-index: 80;
+    opacity: 0.15;
 }
 
 .left-image {
