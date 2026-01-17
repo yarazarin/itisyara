@@ -1,6 +1,11 @@
 import React from "react";
 import "./CaseStudyPages.css";
 import Joinimg from "./Joinimg";
+import c2 from "../../img/c2.png";
+import c3 from "../../img/c3.png";
+import c4 from "../../img/c4.png";
+import c5 from "../../img/c5.png";
+import c6 from "../../img/c6.png";
 
 export const Page1 = () => (
     <div className="page-1-custom wheel-pages_All">
@@ -32,6 +37,7 @@ export const Page1 = () => (
 export const Page2 = () => (
     <div className="page-2-custom wheel-pages_All">
         <div className="cardex-page-2">
+        <img className="page-2-img" src={c3} alt="Page 2 Illustration" />
             <h1 className="page-2-h1">
                 {" "}
                 2. Planning the brain: MongoDB & models
@@ -69,6 +75,7 @@ export const Page3 = () => (
                 visit,” “verify this user”—and always get a
                 reliable, secure answer.
             </p>
+        <img className="page-3-img" src={c2} alt="Page 3 Illustration" />
         </div>
     </div>
 );
@@ -91,6 +98,7 @@ export const Page4 = () => (
                 code, the real keys to the kingdom stayed
                 hidden.
             </p>
+        <img className="page-4-img" src={c4} alt="Page 4 Illustration" />
         </div>
     </div>
 );
@@ -98,6 +106,7 @@ export const Page4 = () => (
 export const Page5 = () => (
     <div className="page-5-custom wheel-pages_All">
         <div className="cardex-page-5">
+        <img className="page-5-img" src={c5} alt="Page 5 Illustration" />
             <h1 className="page-5-h1">
                 {" "}
                 5. Teaching the app to see: analytics
@@ -124,6 +133,7 @@ export const Page6 = () => (
             <h1 className="page-6-h1">
                 6. Crafting the face: React UI
             </h1>
+            <img className="page-6-img" src={c6} alt="Page 6 Illustration" />
             <p className="page-6-p">
                 Once the brain and backbone were ready, it
                 was time to design the “face” people would
