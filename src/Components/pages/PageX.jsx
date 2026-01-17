@@ -3,11 +3,12 @@ import "./PageX.css";
 import MatrixRain from "../MatrixRain";
 
 const textLines = [
-    "Case Study??",
-    "No!",
-    "It's not jsut a case study.",
-    "It's show how I made a project from scratch,",
-    "secure, fast, beautiful and exceeded my client's expectations making them happy! I want to show you how I made a MERN project and trogh that you know how I think and how I work.",
+    "It all started on a rainy evening when my client said",
+    <br />,
+    "“I don’t just want a blog; I want a living journal of my thoughts.”",
+    <br />,
+    " I knew a simple template wouldn’t be enough, so I decided to build a custom MERN application from scratch,",
+    " something that could grow with their ideas instead of limiting them.",
 ];
 
 const PageX = ({ onBack, onNext }) => {
@@ -127,7 +128,8 @@ const PageX = ({ onBack, onNext }) => {
                                 key={index}
                             >
                                 {line}
-                                {((index === currentLineIndex &&
+                                {((index ===
+                                    currentLineIndex &&
                                     currentCharIndex <
                                         textLines[
                                             currentLineIndex
@@ -137,69 +139,78 @@ const PageX = ({ onBack, onNext }) => {
                                         index ===
                                             typedText.length -
                                                 1)) && (
-                                        <span className="typing-cursor">
-                                            |
-                                        </span>
-                                    )}
+                                    <span className="typing-cursor">
+                                        |
+                                    </span>
+                                )}
                             </p>
                         ))}
-                {showNext && (
-                    <button
-                        className="nextButton"
-                        onMouseEnter={() =>
-                            setIsHovered(true)
-                        }
-                        onMouseLeave={() =>
-                            setIsHovered(false)
-                        }
-                        onClick={onNext}
-                    >
-                        <div
-                            style={{ position: "relative" }}
-                        >
-                            <span
-                                style={{
-                                    position: "absolute",
-                                    left: 0,
-                                    top: 0,
-                                    bottom: 0,
-                                    right: 0,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent:
-                                        "center",
-                                    opacity: isHovered
-                                        ? 0
-                                        : 1,
-                                    transition:
-                                        "opacity 0.8s ease",
-                                }}
+                        {showNext && (
+                            <button
+                                className="nextButton"
+                                onMouseEnter={() =>
+                                    setIsHovered(true)
+                                }
+                                onMouseLeave={() =>
+                                    setIsHovered(false)
+                                }
+                                onClick={onNext}
                             >
-                                Are you ready?
-                            </span>
-                            <span
-                                style={{
-                                    position: "absolute",
-                                    left: 0,
-                                    top: 0,
-                                    bottom: 0,
-                                    right: 0,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent:
-                                        "center",
-                                    opacity: isHovered
-                                        ? 1
-                                        : 0,
-                                    transition:
-                                        "opacity 0.8s ease",
-                                }}
-                            >
-                                YES!
-                            </span>
-                        </div>
-                    </button>
-                )}
+                                <div
+                                    style={{
+                                        position:
+                                            "relative",
+                                    }}
+                                >
+                                    <span
+                                        style={{
+                                            position:
+                                                "absolute",
+                                            left: 0,
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 0,
+                                            display: "flex",
+                                            alignItems:
+                                                "center",
+                                            justifyContent:
+                                                "center",
+                                            opacity:
+                                                isHovered
+                                                    ? 0
+                                                    : 1,
+                                            transition:
+                                                "opacity 0.8s ease",
+                                        }}
+                                    >
+                                        next?
+                                    </span>
+                                    <span
+                                        style={{
+                                            position:
+                                                "absolute",
+                                            left: 0,
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 0,
+                                            display: "flex",
+                                            alignItems:
+                                                "center",
+                                            justifyContent:
+                                                "center",
+                                            opacity:
+                                                isHovered
+                                                    ? 1
+                                                    : 0,
+                                            transition:
+                                                "opacity 0.8s ease",
+                                        }}
+                                    >
+                                        YES!
+                                    </span>
+                                </div>
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>

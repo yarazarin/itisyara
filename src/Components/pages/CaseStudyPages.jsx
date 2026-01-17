@@ -6,36 +6,9 @@ export const Page1 = () => (
     <div className="page-1-custom wheel-pages_All">
         <div className="cardex-page-1">
             <h1 className="page-1-h1">
-                1. The day the idea was born
+                1. Choosing the MERN toolbox
             </h1>
             <p className="page-1-p">
-                It all started on a rainy evening when my
-                client said, “I don’t just want a blog; I
-                want a living journal of my thoughts.” I
-                knew a simple template wouldn’t be enough,
-                so I decided to build a custom MERN
-                application from scratch, something that
-                could grow with their ideas instead of
-                limiting them.
-            </p>
-        </div>
-        <Joinimg />
-    </div>
-);
-
-/**
- * Page 2 of the Case Study page, currently a blank page.
- * You can add your content here.
- */
-
-
-export const Page2 = () => (
-    <div className="page-2-custom wheel-pages_All">
-        <div className="cardex-page-2">
-            <h1 className="page-2-h1">
-                3. Choosing the MERN toolbox
-            </h1>
-            <p className="page-2-p">
                 Imagine you want to build a tree-house that
                 can be expanded later: you don’t use random
                 pieces of wood, you choose a system. That is
@@ -47,16 +20,23 @@ export const Page2 = () => (
                 gears.
             </p>
         </div>
+        <Joinimg />
     </div>
 );
 
-export const Page3 = () => (
-    <div className="page-3-custom wheel-pages_All">
-        <div className="cardex-page-3">
-            <h1 className="page-3-h1">
-                4. Planning the brain: MongoDB & models
+/**
+ * Page 2 of the Case Study page, currently a blank page.
+ * You can add your content here.
+ */
+
+export const Page2 = () => (
+    <div className="page-2-custom wheel-pages_All">
+        <div className="cardex-page-2">
+            <h1 className="page-2-h1">
+                {" "}
+                2. Planning the brain: MongoDB & models
             </h1>
-            <p className="page-3-p">
+            <p className="page-2-p">
                 Before drawing a single pixel, I designed
                 how the data would live in the database,
                 like planning the shelves and boxes in a
@@ -71,14 +51,14 @@ export const Page3 = () => (
     </div>
 );
 
-export const Page4 = () => (
-    <div className="page-4-custom wheel-pages_All">
-        <div className="cardex-page-4">
-            <h1 className="page-4-h1">
-                5. Building the backbone: Node.js and
+export const Page3 = () => (
+    <div className="page-3-custom wheel-pages_All">
+        <div className="cardex-page-3">
+            <h1 className="page-3-h1">
+                3. Building the backbone: Node.js and
                 Express
             </h1>
-            <p className="page-4-p">
+            <p className="page-3-p">
                 Next, I built the “roads” that every piece
                 of data travels on using Node.js and
                 Express, like creating safe highways between
@@ -93,13 +73,13 @@ export const Page4 = () => (
     </div>
 );
 
-export const Page5 = () => (
-    <div className="page-5-custom wheel-pages_All">
-        <div className="cardex-page-5">
-            <h1 className="page-5-h1">
-                6. Guarding the gates: auth and security
+export const Page4 = () => (
+    <div className="page-4-custom wheel-pages_All">
+        <div className="cardex-page-4">
+            <h1 className="page-4-h1">
+                4. Guarding the gates: auth and security
             </h1>
-            <p className="page-5-p">
+            <p className="page-4-p">
                 Because this wasn’t a toy project, I treated
                 security like a castle with guarded gates
                 instead of an open field. I used JSON Web
@@ -115,14 +95,15 @@ export const Page5 = () => (
     </div>
 );
 
-export const Page6 = () => (
-    <div className="page-6-custom wheel-pages_All">
-        <div className="cardex-page-6">
-            <h1 className="page-6-h1">
-                7. Teaching the app to see: analytics
+export const Page5 = () => (
+    <div className="page-5-custom wheel-pages_All">
+        <div className="cardex-page-5">
+            <h1 className="page-5-h1">
+                {" "}
+                5. Teaching the app to see: analytics
                 middleware
             </h1>
-            <p className="page-6-p">
+            <p className="page-5-p">
                 I wanted the app not just to exist, but to
                 learn from its visitors, like a shopkeeper
                 who remembers who comes in and from where.
@@ -137,13 +118,13 @@ export const Page6 = () => (
     </div>
 );
 
-export const Page7 = () => (
-    <div className="page-7-custom wheel-pages_All">
-        <div className="cardex-page-7">
-            <h1 className="page-7-h1">
-                8. Crafting the face: React UI
+export const Page6 = () => (
+    <div className="page-6-custom wheel-pages_All">
+        <div className="cardex-page-6">
+            <h1 className="page-6-h1">
+                6. Crafting the face: React UI
             </h1>
-            <p className="page-7-p">
+            <p className="page-6-p">
                 Once the brain and backbone were ready, it
                 was time to design the “face” people would
                 actually see and touch, using React for a
@@ -158,13 +139,14 @@ export const Page7 = () => (
     </div>
 );
 
-export const Page8 = () => (
-    <div className="page-8-custom wheel-pages_All">
-        <div className="cardex-page-8">
-            <h1 className="page-8-h1">
-                9. Making it beautiful and readable
+export const Page7 = () => (
+    <div className="page-7-custom wheel-pages_All">
+        <div className="cardex-page-7">
+            <h1 className="page-7-h1">
+                {" "}
+                7. Making it beautiful and readable
             </h1>
-            <p className="page-8-p">
+            <p className="page-7-p">
                 Good storytelling needs a good stage, so I
                 focused on typography, spacing, and motion
                 to keep readers comfortable. Custom fonts,
@@ -179,14 +161,14 @@ export const Page8 = () => (
     </div>
 );
 
-export const Page9 = () => (
-    <div className="page-9-custom wheel-pages_All">
-        <div className="cardex-page-9">
-            <h1 className="page-9-h1">
-                10. Giving the writer superpowers: editor &
+export const Page8 = () => (
+    <div className="page-8-custom wheel-pages_All">
+        <div className="cardex-page-8">
+            <h1 className="page-8-h1">
+                8. Giving the writer superpowers: editor &
                 tags
             </h1>
-            <p className="page-9-p">
+            <p className="page-8-p">
                 For the client, writing inside the app had
                 to feel like using a friendly digital
                 notebook, not like wrestling with code. With
@@ -202,13 +184,13 @@ export const Page9 = () => (
     </div>
 );
 
-export const Page10 = () => (
-    <div className="page-10-custom wheel-pages_All">
-        <div className="cardex-page-10">
-            <h1 className="page-10-h1">
-                10. Showing the results: analytics dashboard
+export const Page9 = () => (
+    <div className="page-9-custom wheel-pages_All">
+        <div className="cardex-page-9">
+            <h1 className="page-9-h1">
+                9. Showing the results: analytics dashboard
             </h1>
-            <p className="page-10-p">
+            <p className="page-9-p">
                 Finally, I turned all the tracked visits
                 into visual stories using charts, tables,
                 and filters that reveal patterns over time.
