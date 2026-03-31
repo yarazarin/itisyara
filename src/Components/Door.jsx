@@ -39,8 +39,8 @@ export default function Door({ onDoorClick }) {
             <div className="fade-transition" />
             <div className="container">
                 <div className="flipbox">
-                    <a
-                        href="#"
+                    <button
+                        type="button"
                         className="framedoor"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
@@ -57,7 +57,7 @@ export default function Door({ onDoorClick }) {
                             }`}
                             aria-hidden="true"
                         />
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
