@@ -38,7 +38,7 @@
     top: 70vh;
     left: 0;
     transform-origin: left;
-    transition: transform 0.3s ease;
+    /* transition removed – JS drives the transform via requestAnimationFrame */
     z-index: 5;
     pointer-events: none;
     animation: shown-pen 1.5s ease-in-out;
@@ -62,6 +62,7 @@
     background-size: auto 100vh;
     background-repeat: no-repeat;
     background-position: 0 0;
+    /* transition removed – JS drives the transform via requestAnimationFrame */
 }
 
 .section {

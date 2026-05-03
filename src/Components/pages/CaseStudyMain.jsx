@@ -27,57 +27,105 @@ const caseStudyPages = [
 
 const CaseStudyMain = ({ onBack }) => {
     const [currentSection, setCurrentSection] = useState(0);
+    const [displaySection, setDisplaySection] = useState(0);
     const containerRef = useRef(null);
-    const accumulatedScrollRef = useRef(0);
+    const touchStartRef = useRef(null);
+    const touchStartYRef = useRef(null);
+    const isScrolling = useRef(false);
+
+    const goToSection = (index) => {
+        setCurrentSection((prev) => {
+            const newIndex = Math.max(0, Math.min(index, caseStudyPages.length - 1));
+            return newIndex;
+        });
+    };
+
+    // Smooth lerp loop – runs every frame, no snap/jump at end
+    useEffect(() => {
+        let rafId;
+        const lerp = (a, b, t) => a + (b - a) * t;
+
+        const tick = () => {
+            setDisplaySection((prev) => {
+                const next = lerp(prev, currentSection, 0.06);
+                // If we are *extremely* close, just lock to target so we
+                // don't waste micro-updates, but do it so close the user
+                // will never perceive a jump.
+                return Math.abs(next - currentSection) < 0.0001
+                    ? currentSection
+                    : next;
+            });
+            rafId = requestAnimationFrame(tick);
+        };
+
+        rafId = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(rafId);
+    }, [currentSection]);
 
     useEffect(() => {
         const handleWheel = (e) => {
             e.preventDefault();
-            accumulatedScrollRef.current += e.deltaY;
+            if (isScrolling.current) return;
+
+            isScrolling.current = true;
+            setTimeout(() => {
+                isScrolling.current = false;
+            }, 600);
+
+            if (e.deltaY > 0) {
+                goToSection(currentSection + 1);
+            } else if (e.deltaY < 0) {
+                goToSection(currentSection - 1);
+            }
+        };
+
+        const handleTouchStart = (e) => {
+            touchStartRef.current = e.touches[0].clientX;
+            touchStartYRef.current = e.touches[0].clientY;
+        };
+
+        const handleTouchMove = (e) => {
+            if (touchStartRef.current === null) return;
+            e.preventDefault();
+        };
+
+        const handleTouchEnd = (e) => {
+            if (touchStartRef.current === null) return;
+
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            const diffX = touchStartRef.current - endX;
+            const diffY = touchStartYRef.current - endY;
+
+            touchStartRef.current = null;
+            touchStartYRef.current = null;
+
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    goToSection(currentSection + 1);
+                } else {
+                    goToSection(currentSection - 1);
+                }
+            }
         };
 
         const container = containerRef.current;
         if (container) {
-            container.addEventListener(
-                "wheel",
-                handleWheel,
-                { passive: false }
-            );
+            container.addEventListener("wheel", handleWheel, { passive: false });
+            container.addEventListener("touchstart", handleTouchStart, { passive: true });
+            container.addEventListener("touchmove", handleTouchMove, { passive: false });
+            container.addEventListener("touchend", handleTouchEnd, { passive: true });
         }
 
         return () => {
             if (container) {
-                container.removeEventListener(
-                    "wheel",
-                    handleWheel
-                );
+                container.removeEventListener("wheel", handleWheel);
+                container.removeEventListener("touchstart", handleTouchStart);
+                container.removeEventListener("touchmove", handleTouchMove);
+                container.removeEventListener("touchend", handleTouchEnd);
             }
         };
-    }, []);
-
-    useEffect(() => {
-        let animationId;
-        const animate = () => {
-            if (accumulatedScrollRef.current !== 0) {
-                const scrollAmount =
-                    accumulatedScrollRef.current / 2000; // Slow down the scroll
-                setCurrentSection((prev) =>
-                    Math.max(
-                        0,
-                        Math.min(
-                            prev + scrollAmount,
-                            caseStudyPages.length - 1
-                        )
-                    )
-                );
-                accumulatedScrollRef.current *= 0.95; // Dampen the accumulated scroll
-            }
-            animationId = requestAnimationFrame(animate);
-        };
-        animationId = requestAnimationFrame(animate);
-
-        return () => cancelAnimationFrame(animationId);
-    }, []);
+    }, [currentSection]);
 
     const handleBackClick = () => {
         if (onBack) {
@@ -87,57 +135,44 @@ const CaseStudyMain = ({ onBack }) => {
 
     return (
         <>
-            {currentSection >= 1 && (
+            {displaySection >= 1 && (
                 <img
                     src={penImage}
                     alt="pen"
                     className="scrolling-pen"
                     style={{
-                        transform: `rotateX(${currentSection * 36}deg) translateX(${((currentSection - 1) / 8) * 68}vw)`,
+                        transform: `rotateX(${displaySection * 36}deg) translateX(${((displaySection - 1) / 8) * 68}vw)`,
                         width: "150px",
                         height: "auto",
                     }}
                 />
             )}
-            <div
-                className="case-study-page"
-                ref={containerRef}
-            >
-                <button
-                    className="back-button"
-                    onClick={handleBackClick}
-                >
+            <div className="case-study-page" ref={containerRef}>
+                <button className="back-button" onClick={handleBackClick}>
                     ← Back
                 </button>
 
                 <div
                     className="sections-container"
                     style={{
-                        transform: `translateX(-${currentSection * 100}vw)`,
-                        backgroundPosition: `${100 + currentSection * 30}vw 0`,
+                        transform: `translateX(-${displaySection * 100}vw)`,
+                        backgroundPosition: `${100 + displaySection * 30}vw 0`,
                     }}
                 >
-                    {caseStudyPages.map(
-                        (pageComponent, index) => (
-                            <div
-                                key={index}
-                                className="section"
-                            >
-                                <div className="section-content">
-                                    {pageComponent}
-                                </div>
+                    {caseStudyPages.map((pageComponent, index) => (
+                        <div key={index} className="section">
+                            <div className="section-content">
+                                {pageComponent}
                             </div>
-                        )
-                    )}
+                        </div>
+                    ))}
                 </div>
                 <div className="progress-indicators">
                     {caseStudyPages.map((_, index) => (
                         <div
                             key={index}
-                            className={`indicator ${index === Math.round(currentSection) ? "active" : ""}`}
-                            onClick={() =>
-                                setCurrentSection(index)
-                            }
+                            className={`indicator ${index === Math.round(displaySection) ? "active" : ""}`}
+                            onClick={() => setCurrentSection(index)}
                         />
                     ))}
                 </div>
